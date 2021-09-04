@@ -1,0 +1,51 @@
+<html>
+<body>
+<script>
+function myform(){
+ var name=document.myform.fname.value;
+ var name=document.myform.lname.value;
+ var email=document.myform.email.value;
+ var password=document.myform.password.value;
+ var number= document.myform.phonenumber.value;
+if(name==null || name==""){
+  alert("Name can't be blank");
+  return false;
+}
+if(email==null || email==""){
+  alert("email can't be blank")
+  return false;
+  }
+if(number==null || number==""){
+  alert("number can't be blank")
+  return false;
+}
+else if(password.length<6){
+  alert("password must be atleast 6 characters long.");
+  return false;
+}
+}
+console.log(myform);
+</script>
+<body>
+<form>
+
+</form class="registrartion form" >
+<label>fname</label>
+<input type="text" name="fname"><br><br>
+<label>lname</lname>
+<input type="text" name="lname"><br><br>
+<label>email</label>
+<input type="email" name="email"><br><br>
+<label>password</label>
+<input type="password" name="password"><br><br>
+<label>phonenumber</label>
+<input type="number" name="mobile number"><br><br>
+<input type="button" value="submit">
+<button type="submit" value="register"></button>
+</form>
+</body>
+</head>
+<html>
+
+  
+ 

@@ -1,0 +1,107 @@
+<html>
+    <body>
+        <style>
+        body {
+            background-color:whitesmoke;
+      width: 520px;
+      height: 500px;
+      padding: 10px;
+      border: 5px solid gray;
+      margin: 0;
+    }
+  </style>
+        </h1>10% Discount on Total Price</h1>
+<table>
+    <tr>
+     <th>Item Name</th>
+    <th>Item Price/kg</th>
+    <th>Quantity</th>
+     </tr>
+     <tr>
+     <td>cucumber</td>
+    <td>50 RS</td>
+     <td><input type="number" id="cucumber"></td>
+     </tr>
+    <tr>
+     <td>Tomato</td>
+    <td>30 RS</td>
+    <td><input type="number" id="Tomato"></td>
+     </tr>
+    <tr>
+     <td>Onions</td>
+    <td>60 RS</td>
+    <td><input type="number" id="Onion"></td>
+     </tr>
+    <tr>
+    <td>beans</td>
+    <td>40 RS</td>
+    <td><input type="number" id="beans"></td>
+    </tr>
+    <tr>
+    <td>chaval</td>
+    <td>60 RS</td>
+    <td><input type="number" id="chaval"></td>
+    </tr>
+    <tr>
+    <td>rajma</td>
+    <td>50 RS</td>
+    <td><input type="number" id="rajma"></td>
+    </tr>
+    <tr>
+    <td>carrot</td>
+    <td>45 RS</td>
+    <td><input type="carrot" id="carrot"></td>
+    </tr>
+    <tr>
+    <td>rice</td>
+    <td> 50 RS</td>
+    <td><input type="rice" id="rice"></td>
+    </tr>
+    <tr>
+    <td>mango</td>
+    <td>60 RS</td>
+    <td><input type="mango" id="mango"></td>
+    </tr>
+    <tr>
+    <td>orange</td>
+    <td>30 RS</td>
+    <td><input type="orange" id="orange"></td><br>
+    </tr>
+    </table>
+<button type="button" onclick="bill()">Genarate Bill</button><br><br>
+    <table class="table-borderless">
+     <tr>
+     <th>Amount:</th>
+    <td id="Amount"></td>
+     </tr><br>
+     <tr>
+     <th>Discount:</th>
+    <td id="Discount"></td>
+     </tr><br>
+     <tr>
+     <th>Total:</th>
+    <td id="Total"></td>
+     </tr>
+     </table>
+    <script> 
+    function bill(){
+     var cucumber=document.getElementById('cucumber').value;
+     var Tomato=document.getElementById('Tomato').value;
+     var Onion=document.getElementById('Onion').value;
+     var beans=document.getElementById('beans').value;
+     var chaval=document.getElementById('chaval').value;
+     var rajma=document.getElementById('rajma').value;
+     var carrot=document.getElementById('carrot').value;
+     var rice=document.getElementById('rice').value;
+     var mango=document.getElementById('mango').value;
+     var orange=document.getElementById('orange').value;
+     
+     var Amount=50*parseInt(cucumber)+30*parseInt(Tomato)+60*parseInt(Onion)+40*parseInt(beans)+60*parseInt(chaval)+50*parseInt(rajma)+45*parseInt(carrot)+50*parseInt(rice)+60*parseInt(mango)+30*parseInt(orange);
+     var Discount=Amount*0.1;
+     document.getElementById('Discount').innerHTML=Discount;
+     document.getElementById('Amount').innerHTML=Amount;
+     document.getElementById('Total').innerHTML=Amount-Discount;
+    }
+    </script>
+    </body>
+    </html>

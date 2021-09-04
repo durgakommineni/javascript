@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The concat() method concatenates (joins) two or more arrays.</p>
+
+<p id="demo"></p>
+
+<script>
+var employees = [{'name':'Oliver','id':214,'desk':1},
+{'name':'Jack','id':146,'desk':2},
+{'name':'Harry','id':125,'desk':3},
+
+{'name':'Jacob','id':176,'desk':4}];
+var candidates = [
+    {'name':'jhon',
+    'id':101,
+    'info':{ 'Address':[{'city':'NY','country':'USA'},{'city':'NJ','country':'USA'}],'mobileNo':[9999999999]},
+    'desk':[
+            {'updated': true,'updatedDesk':1},
+            {'updated': false,'updatedDesk':2}
+           ]
+    },
+    {'name':'steven',
+    'id':102,
+    'info':{
+        'Address':[{'city':'Texas','country':'USA'},{'city':'Mexico','country':'South America'}],
+        'mobileNo':[9999911111,2222255555]
+      },
+    'desk':[
+            {'updated': false,'updatedDesk':1},
+            {'updated': false,'updatedDesk':2},
+            {'updated': true,'updatedDesk':5}
+          ]
+    },
+    {'name':'smith',
+    'id':103,
+    'info':{
+ 'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    'desk':[
+            {'updated': false,'updatedDesk':3},
+            {'updated': true,'updatedDesk':2}
+           ]
+    },
+    {'name':'james',
+    'id':104,
+    'info':{
+        'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    'desk':[  ]
+    },
+    {'name':'marry',
+    'id':105,
+    'desk':[
+            {'updated': false,'updatedDesk':1},
+            {'updated': true,'updatedDesk':5}
+           ]},
+    {'name':'jamesMarry',
+    'id':106,
+    'desk':[
+            {'updated': true,'updatedDesk':3}
+  ]},
+    {'name':'marryJames',
+    'id':107,
+    'info':{
+        'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    }
+  ];
+
+const children = employees.concat(candidates); 
+document.getElementById("demo").innerHTML = children;
+</script>
+
+</body>
+</html>

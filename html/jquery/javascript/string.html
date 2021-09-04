@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <h4 >Reading a string input</h4>
+       
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <input type="text" id="str1" name="firstname" placeholder=" Enter name">
+        <button id="str2" class="btn btn-primary" >click me</button>
+        <script>
+           $(document).ready(function(){
+               $("button").click(function(){
+              console.log($("#str1").val());
+            });
+           });
+        </script>
+        </body>
+        </html>

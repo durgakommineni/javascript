@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <body>
+            <h3 id="pyr"></h3>
+            <script>
+    let n=5           
+    var str = ''; 
+    for (var i = 0; i < n; i++) { 
+    for (var j = i; j <n ; j++) { 
+      str = str+' '; 
+     
+    }str=str+"<center>"
+    for (var k = 1 ; k <=2*(n-i)-1; k++) { 
+      str = str + '*'; 
+      
+    } 
+    str=str+"<center>"
+  } 
+document.getElementById("pyr").innerHTML=str
+
+            </script>
+        </body>
+    </head>
+</html>

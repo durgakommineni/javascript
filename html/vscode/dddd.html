@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+function eliminateDuplicates(arr) {
+    var i,
+        len = arr.length,
+        out = [],
+  
+    for (i = 0; i < len; i++)
+ {
+  for(j=i+1; j<len; j++) 
+   {
+     if(arr[i]==arr[j]){
+     console.log(arr[j])
+   }
+   }
+  }
+  }
+  
+  eliminateDuplicates([4,6,4,8,11,8,20,14,20])
+  </script>
+  </body>
+  </html>

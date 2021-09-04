@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+let persons = [
+  {
+    name : "John Doe Sr",
+    age: 30
+  },{
+    name: "John Doe Jr",
+    age : 5
+  }
+]
+
+function addKeyValue(obj, key, data){
+  obj[key] = data;
+}
+ 
+
+let newinfo = persons.map(function(person) {
+  return addKeyValue(person, 'fish', 'gggg');
+});
+
+console.log(persons);
+</script>
+</body>
+</html>

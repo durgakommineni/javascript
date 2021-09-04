@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <h3>candidates shared the desk</h3>
+  </head>
+  <div id="result"></div>
+<body>
+<script>
+var employees = [{'name':'Oliver','id':214,'desk':1},
+{'name':'Jack','id':146,'desk':2},
+{'name':'Harry','id':125,'desk':3},
+
+{'name':'Jacob','id':176,'desk':4}]
+var candidates = [
+    {'name':'jhon',
+    'id':101,
+    'info':{ 'Address':[{'city':'NY','country':'USA'},{'city':'NJ','country':'USA'}],'mobileNo':[9999999999]},
+    'desk':[
+            {'updated': true,'updatedDesk':1},
+            {'updated': false,'updatedDesk':2}
+           ]
+    },
+    {'name':'steven',
+    'id':102,
+    'info':{
+        'Address':[{'city':'Texas','country':'USA'},{'city':'Mexico','country':'South America'}],
+        'mobileNo':[9999911111,2222255555]
+      },
+    'desk':[
+            {'updated': false,'updatedDesk':1},
+            {'updated': false,'updatedDesk':2},
+            {'updated': true,'updatedDesk':5}
+          ]
+    },
+    {'name':'smith',
+    'id':103,
+    'info':{
+ 'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    'desk':[
+            {'updated': false,'updatedDesk':3},
+            {'updated': true,'updatedDesk':2}
+           ]
+    },
+    {'name':'james',
+    'id':104,
+    'info':{
+        'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    'desk':[  ]
+    },
+    {'name':'marry',
+    'id':105,
+    'desk':[
+            {'updated': false,'updatedDesk':1},
+            {'updated': true,'updatedDesk':5}
+           ]},
+    {'name':'jamesMarry',
+    'id':106,
+    'desk':[
+            {'updated': true,'updatedDesk':3}
+  ]},
+    {'name':'marryJames',
+    'id':107,
+    'info':{
+        'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    }
+  ];var chackflag=false
+ var result =[]
+ var final =[]
+ var count=[];
+ var notasign=[];
+ for(let i=0;i<candidates.length;i++){
+   if(candidates[i].desk!=undefined && candidates[i].desk.length>0){
+     for(let j=0;j<candidates[i].desk.length;j++){
+       checkflag=false;
+       if(candidates[i].desk[j].updated==true){
+         count["name"]=candidates[i].name
+         count["desk"]=candidates[i].desk[j].updatedDesk
+         result.push(count)
+         count={}
+       }
+     }
+   }
+ }
+ for(let x=0;x<result.length;x++){
+   checkflag=false;
+   for(let y=x+1;y<result.length;y++){
+     if(result[x].desk==result[y].desk){
+       final.push(result[x])
+       final.push(result[y])
+       checkflag = true
+       result.splice(y,1)
+    }
+    
+     }
+     if(checkflag==false){
+    notasign.push(result[x])
+
+    }
+    
+   }
+
+ 
+  console.log(final)
+  console.log(notasign)
+  document.getElementById("result").innerHTML=JSON.stringify(final)
+  </script>
+</body>
+</html>

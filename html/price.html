@@ -1,0 +1,112 @@
+<html>
+<body>
+    <div class="container-fluid">
+    <div class="card">
+    <div class="card-header border text-center">
+    <h1>10% Discount on Total Price</h1>
+    </div>
+    <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 card-body" >
+    <table class="table table-borderless">
+    <tr>
+    <th>Item Name</th>
+   <th>Item Price/kg</th>
+   <th>Quantity</th>
+    </tr>
+    <tr>
+    <td>Rice</td>
+   <td>50 RS</td>
+    <td><input type="number" id="Rice"></td>
+    </tr>
+   <tr>
+    <td>Tomato</td>
+   <td>30 RS</td>
+   <td><input type="number" id="Tomato"></td>
+    </tr>
+   <tr>
+    <td>Onions</td>
+   <td>60 RS</td>
+   <td><input type="number" id="Onion"></td>
+    </tr>
+    <tr>
+        <td>orange</td>
+        <td>50 RS</td>
+        <td><input type="number" id="orangr"></td>
+    </tr>
+    <tr>
+        <td>banana</td>
+        <td>40 RS</td>
+        <td><input type="number" id="banana"></td>
+    </tr>
+    <tr>
+        <td>mango</td>
+        <td>50 RS</td>
+        <td><input type="number" id="mango"></td>
+    </tr>
+    <tr>
+        <td>apple</td>
+        <td>60 RS</td>
+        <td><input type="number" id="apple"></td>
+    </tr>
+    <tr>
+        <td>grape</td>
+        <td> 50 RS</td>
+        <td><input type="number" id="grape"></td>
+    </tr>
+    <tr>
+        <td>cucumber</td>
+        <td>70 RS</td>
+        <td><input type="number" id="cucumber"></td>
+    </tr>
+    <tr>
+        <td>carrot</td>
+        <td> 50 RS</td>
+        <td><input type="number" id="carrot"></td>
+    </tr>
+    </table>
+    </div>
+    </div>
+    <div class="card-footer">
+    <div class="text-center">
+    <button type="button" class="btn btn-primary"onclick="bill()">Genarate Bill</button>
+    </div>
+    <table class="table-borderless">
+    <tr>
+    <th>Amount:</th>
+   <td id="Amount"></td>
+    </tr>
+    <tr>
+    <th>Discount:</th>
+   <td id="Discount"></td>
+    </tr>
+    <tr>
+    <th>Total:</th>
+   <td id="Total"></td>
+    </tr>
+    </tr>
+    </table>
+    </div>
+    </div>
+    </div>
+    <script>
+        function bill(){
+ var Rice=document.getElementById('Rice').value;
+ var Tomato=document.getElementById('Tomato').value;
+ var Onion=document.getElementById('Onion').value;
+ var orange=document.getElementById('orange').value;
+ var banana=document.getElementById('banana').value;
+ var mango=document.getElementById('mango').value;
+ var apple=document.getElementById('apple').value;
+ var grape=document.getElementById('grape').value;
+ var cucumber=document.getElementById('cucumber').value;
+ var carrot=document.getElementById('carrot').value;
+ var Amount=50*parseInt(Rice)+30*parseInt(Tomato)+60*parseInt(Onion)+50*parseInt(orange)+40*parseInt(banana)+50*parseInt(mango)+60*parseInt(apple)+50*parseInt(grape)+70*parseInt(cucumber)+50*parseInt(carrot);
+ var Discount=Amount*0.1;
+ document.getElementById('Discount').innerHTML=Discount;
+ document.getElementById('Amount').innerHTML=Amount;
+ document.getElementById('Total').innerHTML=Amount-Discount;
+}
+</script>
+   </body>
+   </html>

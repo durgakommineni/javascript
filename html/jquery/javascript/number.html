@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3 id="num"></h3>
+<script>
+    let n = 5; // height of pattern
+    let star = "";
+    // External loop
+    for (let i = 1; i <= n; i++) {
+      // Internal loop
+      for (let j = 1; j <= i; j++) {
+        star = star+j;
+      }
+      star= star+"<br>";
+    }
+   document.getElementById("num").innerHTML=star
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+function Palin(n){
+    var temp = n;
+    var r;
+    var i=0;
+    while (n != 0) {
+     r =Math.round(n % 10);
+     i = (i * 10) + r;
+     n = Math.round(n / 10); }
+    if (temp == i) {
+     console.log("It is palindrome");
+    }
+    else{
+    console.log("It is not palindrome"); }}
+    Palin(323);
+    </script>
+    </body>
+    </html>

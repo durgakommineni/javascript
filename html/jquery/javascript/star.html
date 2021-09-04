@@ -1,0 +1,20 @@
+<html>
+<head>
+
+</head>
+<body>
+    <h3 id="stars"></h3>
+    <script>
+let n = 6; 
+    let star = "";
+    for (let i = 1; i <=n; i++) {
+      for (let j = 1; j <= i; j++) {
+        star =star+ "*";
+      }
+      star = star+"<br>";
+      console.log(star)
+    }
+    document.getElementById("stars").innerHTML=star
+  </script>
+</body>
+</html>

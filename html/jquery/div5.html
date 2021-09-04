@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <h3>
+     divisible by 5:
+     <span id="div5"></span>
+  </h3>
+  <h4>count div5 : 
+    <span id="count"></span>
+
+  </h4>
+  <h4 >sum of elements : 
+    <span id="some"></span>
+  </h4>
+       <script>
+      $(document).ready(function(){
+          var dec=[];
+          var  dec2=[];
+         var sum=0;
+          for(let i=0;i<100;i++){
+             
+            if(i%5==0){
+               
+            dec.push(i)
+            sum=sum+i
+  
+              }
+               dec2=dec.length 
+           
+            }
+            $("#div5").text(dec)
+            $("#count").text(dec2)
+            $("#some").text(sum)
+            
+          }); 
+              </script>
+              </body>
+              </html>

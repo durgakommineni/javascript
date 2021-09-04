@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    </head>  
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <button type="button" class="navbar-toggle" data-target="#a" data-toggle="collapse">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="a">
+    <ul class=" nav navbar-nav">
+    <li class="nav-item">
+    <a href="#" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" datatoggle="dropdown">login</a>
+    <div class="dropdown-menu">
+    <a href="#user" data-toggle="collapse" class="dropdown-item">User
+   Login</a>
+    <a href="#admin" data-toggle="collapse" class="dropdown-item">Admin
+   Login</a>
+    </div>
+    </li>
+    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" datatoggle="dropdown">register</a>
+    <div class="dropdown-menu">
+    <a href="#email" data-toggle="collapse" class="dropdownitem">Email</a>
+    <a href="#phone" data-toggle="collapse" class="dropdownitem">Phone</a>
+    </div>
+    </li>
+    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" datatoggle="dropdown">Cities</a>
+    <div class="dropdown-menu">
+    <a href="#hyd" data-toggle="collapse" class="dropdownitem">Telangana</a>
+    <a href="#AP" data-toggle="collapse" class="dropdownitem">AndraPradesh</a>
+    <a href="#kanada" data-toggle="collapse" class="dropdownitem">Karnataka</a>
+    <a href="#kerala" data-toggle="collapse" class="dropdownitem">Kerala</a>
+    <a href="#thamil" data-toggle="collapse" class="dropdownitem">Thamilnadu</a>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </nav>
+    <div class="container">
+    <div class="row jumbotron">
+    <div class="col-4">
+    </div>
+    <form>
+    <div id="parent">
+    <div class="collapse mb-4 form-group row" id="user" data-parent="#parent" >
+    <input type="text" name="User Name" placeholder="Username" class="formcontrol">
+    <input type="text" name="Password" placeholder="Password" class="form-control">
+    </div>
+    <div class="collapse mb-4 form-group row" id="admin" data-parent="#parent" >
+    <input type="text" name="Admin Name" placeholder="Admin name"
+   class="form-control">
+    <input type="text" name="Password" placeholder="Password" class="formcontrol">
+    </div>
+    <div class="collapse mb-4 form-group row" id="email" data-parent="#parent" >
+    <input type="text" name="Email id" placeholder="Email id" class="formcontrol">
+    <input type="text" name="Password" placeholder="Password" class="formcontrol">
+    </div>
+    <div class="collapse mb-4 form-group row" id="phone" data-parent="#parent" >
+    <input type="text" name="Phone" placeholder="+91" class="form-control">
+    </div>
+    <div class="collapse mb-4 form-group row" id="hyd" data-parent="#parent" >
+    <p>Telangana is a state in India situated on the centre-south stretch of the Indian
+   peninsula on the high Deccan Plateau. </p>
+   
+    </div>
+    <div class="collapse mb-4 form-group row" id="AP" data-parent="#parent" >
+    <p>Andhra Pradesh is one of the 28 states of India. Situated in the south-east
+   of the country.</p>
+    <p> The north-western portion of Andhra Pradesh.</p>
+    </div>
+    <div class="collapse mb-4 form-group row" id="kanada" data-parent="#parent"
+   >
+    <p>Karnataka (Karnāṭaka) is a state in the south western region of India. It
+   was formed on 1 November 1956.</p>
+    <p>Karnataka is bordered by the Arabian Sea to the west, Goa to the
+   northwest, Maharashtra to the north</p>
+    </div>
+    <div class="collapse mb-4 form-group row" id="kerala" dataparent="#parent" >
+    <p>Kerala is a state on the southwestern Malabar Coast of India. p>
+    </div>
+    <div class="collapse mb-4 form-group row" id="thamil" dataparent="#parent" >
+    <p>Tamil Nadu (About this soundlisten)).</p>
+    </div>
+    </div>
+    </form>
+    <div class="col-4">
+    </div>
+    </div>
+   </div>
+   </body>
+   </html>

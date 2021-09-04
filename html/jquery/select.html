@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <h3>
+      KOMMINENI 
+  </h3>
+  <select id="select">
+    <option value="Black"selected>Black</option>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
+    <option value="Green">Green</option>
+    <option value="Yellow">Yellow</option>
+    <option value="Pink">Pink</option>
+    <option value="orange">orange</option>
+    <option value="brown">brown</option>
+    <option value="purple">Purple</option>
+  </select>
+  <br/>
+  <br/>
+  
+ <script>
+  $(document).ready(function() {
+    
+  
+    $('select').change(function() {
+     var mine = $(this).val();
+      $('h3').css('color', mine);
+    });
+  });
+  </script>

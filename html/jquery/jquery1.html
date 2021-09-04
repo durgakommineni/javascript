@@ -1,0 +1,148 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <style>
+    body {
+         color:yellow;
+     }
+    
+ #borderCss{
+     border:4px;
+ }
+ #signin{
+     border-bottom: 2px;
+     color:yellow;
+     background-color:tomato;
+     
+ }
+ .backCss{
+     background-color:black;
+ }
+ .textCss{
+     color:yellow;
+     float:right;
+ }
+ .buttonCss{
+     display:flex;
+ }
+ table, th,td {
+  border: 2px solid black;
+  color:red;
+  
+ }
+ th{
+background-color:yellow;
+ }
+  
+ </style>
+</head>
+<body>
+    <div class=" form-group row">
+      <div class="col-3"></div>
+      <div class="col-6 backCss "id="borderCss">
+          <div class="row" id="signin">
+              <label class="col-3">
+                  <h6>signup</h6>
+              </label>
+      </div>
+<div class="container">
+ <div class="form-group row">
+    <div class="col-3">
+    <label for="Name">Name</label>
+    </div>
+    <div class="col-9">
+    <input type="text" placeholder="EnterFirstName" id="name" class="form-control"required>
+    </div>
+    </div>
+        <div class="form-group row">
+        <div class="col-3">
+        <label for="role">Role</label>
+        </div>
+        <div class="col-9">
+        <input type="text" placeholder="EnterRoleName" id="role" class="form-control"required>
+        </div>
+        </div>
+        
+            <div class="form-group row">
+            <div class="col-3">
+            <label for="id">Id</label>
+            </div>
+            <div class="col-9">
+            <input type="text" placeholder="EnterId" id="id" class="form-control"required>
+            </div>
+            </div>
+                
+                <div class="form-group row ">
+                    <div class="col-3">
+                           <label >Country</label>
+                    </div>
+                           <div class="col-9">
+                            <select name="select" id="state" class="form-control">
+                                <option vlaue=" "> </option>
+                            <option vlaue="USA">USA</option>
+                            <option vlaue="INDIA">India</option>
+                            <option vlaue="UK">Uk</option>
+                            </select>
+                       </div>
+                </div>
+    <div class="form-group row">
+        <div class="col-3">
+        <label for="phone">Phone</label>
+        </div>
+        <div class="col-9">
+        
+        <input type="number" placeholder="Enterphonenumber" id="number" class="form-control">
+        </div>
+    </div>
+               <div class="row" id="signin">
+                  <div class="col-9 "></div>
+                  <div class="col-3">
+               <button type="button" class="btn btn-success ">Submit</button>
+               
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </form>
+          
+        <table class="form-group" calss="form-control"id="car">
+        <tr>
+        <th> Name</th>
+       <th>Role</th>
+       <th>Id</th>
+       <th>country</th>
+       <th>Phone Number</th>
+        </tr>
+       </table>
+       </div>
+       </div>
+       </div>
+       </div>
+ </div>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $("#car").hide()
+    $("button").click(function(){
+       $("#car").show()
+let Name=$("#name").val();
+let Role=$("#role").val();
+let Id=$("#id").val();
+let Country=$("#state").val();
+let Phone=$("#number").val();
+$("#car").append('<tr><td>'+Name+'</td><td>'+Role+'</td><td>'+Id+'</td><td>'+Country+'</td><td>'+Phone+'</td></tr>');
+    });
+$('#car').each(function( ){            
+ $($("#car").find('td'));
+});
+});
+</script>   
+</body>
+   </html>

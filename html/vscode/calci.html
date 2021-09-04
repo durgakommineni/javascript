@@ -1,0 +1,69 @@
+<head>
+    <style>
+   body {
+        background-color:whitesmoke;
+  width: 520px;
+  height: 500px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+    </style>
+</head>
+ <table align="center" height="300px" >
+    <tr>
+    <td><h3>First Value</h3> </td>
+   <td><input type="number" id="a" placeholder="Enter
+   First Value"></td>
+    </tr>
+    <tr>
+    <td><h3> Second Value</h3></td>
+   <td><input type="number" id="b" placeholder="Enter
+   Second Value"></td>
+    </tr>
+    <tr>
+    <td></td>
+   <td><button type="button" onclick="Sum()">+</button>
+    <button type="button" onclick="Sub()">-</button>
+    <button type="button" onclick="Mul()">*</button>
+    <button type="button" onclick="Div()">/</button>
+   <button type="button"onclick="Modul()">%</button></td>
+    </tr>
+    </table>
+    <table align="center">
+    <tr>
+    <td> <h4>Result is:- </h4></td>
+     <td> <div id="result">
+    </div></td>
+    </tr>
+    </table>
+    <script> 
+function Sum() {
+ var a=document.getElementById('a').value;
+ var b=document.getElementById('b').value;
+ document.getElementById("result").innerHTML=parseInt(a)+parseInt(b);
+}
+function Sub() {
+ var a=document.getElementById('a').value;
+ var b=document.getElementById('b').value;
+ document.getElementById("result").innerHTML=parseInt(a)-parseInt(b);
+}
+function Mul() {
+ var a=document.getElementById('a').value;
+ var b=document.getElementById('b').value;
+ document.getElementById("result").innerHTML=parseInt(a)*parseInt(b);
+}
+function Div() {
+ var a=document.getElementById('a').value;
+ var b=document.getElementById('b').value;
+ document.getElementById("result").innerHTML=parseInt(a)/parseInt(b);
+}
+function Modul() {
+ var a=document.getElementById('a').value;
+ var b=document.getElementById('b').value;
+ document.getElementById("result").innerHTML=parseInt(a)%parseInt(b);
+}
+
+  </script>
+    </body>
+    </html>

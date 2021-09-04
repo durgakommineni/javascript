@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <p
+            id="mine">
+        </p>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+            var a= 'Everyone is true until the turn comes to you'
+            var slit=a.split(" ")
+var  rev=[];
+
+for( let i=0;i<slit.length;i++){
+   rev.push(slit[i].split("").reverse().join(" "))
+  
+}  
+    
+            $("#mine").text(rev.join(""))
+      
+        
+                  });//$("#mine").text(rev.join(""))
+                });
+        </script>
+         <button type="button" class="btn btn-success ">clickme</button>
+    </body>
+</html>

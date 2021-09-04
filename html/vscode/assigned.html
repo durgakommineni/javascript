@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <h3>candidates assinged to employee</h3>
+  </head>
+  <div id="result"></div>
+<body>
+<script>
+var employees = [{'name':'Oliver','id':214,'desk':1},
+{'name':'Jack','id':146,'desk':2},
+{'name':'Harry','id':125,'desk':3},
+
+{'name':'Jacob','id':176,'desk':4}]
+var candidates = [
+    {'name':'jhon',
+    'id':101,
+    'info':{ 'Address':[{'city':'NY','country':'USA'},{'city':'NJ','country':'USA'}],'mobileNo':[9999999999]},
+    'desk':[
+            {'updated': true,'updatedDesk':1},
+            {'updated': false,'updatedDesk':2}
+           ]
+    },
+    {'name':'steven',
+    'id':102,
+    'info':{
+        'Address':[{'city':'Texas','country':'USA'},{'city':'Mexico','country':'South America'}],
+        'mobileNo':[9999911111,2222255555]
+      },
+    'desk':[
+            {'updated': false,'updatedDesk':1},
+            {'updated': false,'updatedDesk':2},
+            {'updated': true,'updatedDesk':5}
+          ]
+    },
+    {'name':'smith',
+    'id':103,
+    'info':{
+ 'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    'desk':[
+            {'updated': false,'updatedDesk':3},
+            {'updated': true,'updatedDesk':2}
+           ]
+    },
+    {'name':'james',
+    'id':104,
+    'info':{
+        'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    'desk':[  ]
+    },
+    {'name':'marry',
+    'id':105,
+    'desk':[
+            {'updated': false,'updatedDesk':1},
+            {'updated': true,'updatedDesk':5}
+           ]},
+    {'name':'jamesMarry',
+    'id':106,
+    'desk':[
+            {'updated': true,'updatedDesk':3}
+  ]},
+    {'name':'marryJames',
+    'id':107,
+    'info':{
+        'Address':[{'city':'A&M','country':'USA'},{'city':'Brazel','country':'South America'}],
+        'mobileNo':[1111999999,2222266666]
+      },
+    }
+  ];var checkflag=false
+    var result=[]
+    var emlpoyeeresult=[]
+  for (let i=0;i<candidates.length;i++){
+  var candidate =candidates[i]
+  var candesk= candidate.desk
+ if(candesk!=undefined && candesk.length>0){
+   for(let j=0;j<candesk.length;j++){
+      checkflag=false;
+     var updesk = candesk[j].updated
+     var  dateddesk= candesk[j].updatedDesk
+     if(updesk==true)
+   {
+     for(let k=0; k<employees.length;k++){
+       var emply=employees[k].desk
+       if(dateddesk==emply){
+         checkflag=true
+       
+        // emlpoyeeresult.push(employees[k])
+         console.log(candidate.name+"is assinged to "+employees[k].name,employees[k])
+        emlpoyeeresult.push(candidate.name+" is assinged to "+employees[k].name)
+         }
+
+       }
+       
+     }
+   //  if(checkflag==true){
+  //result.push(candidate.name)
+
+  // console.log("candidatename",candidate.name)
+  // }
+
+     
+   }
+ }
+ 
+ }
+ //console.log(emlpoyeeresult)
+
+ 
+ 
+ //console.log(result)
+ document.getElementById("result").innerHTML=emlpoyeeresult
+</script>
+</body>
+</html>

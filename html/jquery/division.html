@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <h3>
+     divisible by 3
+     <span id="more"></span>
+  </h3>
+  <h3>divisible by 5 <br>
+    <span id="mine"></span></h3>
+    <h3>divisible by 3 & 5 <br>
+        <span id="nine"></span></h3>
+  <script>
+      $(document).ready(function(){
+          var dec=[];
+          var dec2=[];
+          var dec3=[];
+          for(let i=0;i<100;i++){
+              if(i%3==0){
+                console.log((i));
+                dec.push(i)
+                
+              }
+              if(i%5==0){
+                console.log(i)  
+dec2.push(i)
+              }
+              if(i%3==0&&i%5==0){
+                  dec3.push(i)
+              }
+          }
+          $("#more").text(dec)
+          $("#mine").text(dec2)
+          $("#nine").text(dec3)
+          
+      });
+  </script>
+  </body>
+  </html>

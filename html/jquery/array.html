@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<h5> Print Array Values with indexvalue</h5>
+<div id="inputValues"></div><br>
+<input type="number" id="index" placeholder="enter index" ><br>
+<button id="index1" type="button">submit</button>
+<div id="result"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        var fruitsArray = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+        
+        $("#inputValues").text(fruitsArray)   
+        $("#index1").click(function(){
+        let index=$("#index").val()
+        if(index<=fruitsArray.length){
+            $("#result").text(fruitsArray[index])
+        }
+        else{
+            $("#result").text("index not found")
+        }
+        });
+    });
+</script>  
+</body>
+</html>

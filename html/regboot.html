@@ -1,0 +1,173 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+   body {
+        color:yellow;
+    }
+   
+#borderCss{
+    border:4px;
+}
+#signupCss{
+    border-bottom: 2px;
+    color:yellow;
+    background-color:tomato;
+    
+}
+.backCss{
+    background-color:black;
+}
+.textCss{
+    color:yellow;
+    float:right;
+}
+.buttonCss{
+    display:flex;
+}
+</style>
+</head>
+<body>
+    <div class=" form-group row">
+      <div class="col-3"></div>
+      <div class="col-6 backCss "id="borderCss">
+          <div class="row" id="signupCss">
+              <label class="col-3">
+                  <h6>signup</h6>
+              </label>
+      </div>
+<div class="container">
+ <div class="form-group row">
+    <div class="col-3">
+    <label for="firstname">Firstname</label>
+    </div>
+    <div class="col-9">
+    <input type="text" placeholder="EnterFirstName" id="FirstName" class="form-control"required>
+    </div>
+    </div>
+        <div class="form-group row">
+        <div class="col-3">
+        <label for="Lastname">Lastname</label>
+        </div>
+        <div class="col-9">
+        <input type="text" placeholder="EnterLastName" id="LastName" class="form-control"required>
+        </div>
+        </div>
+        
+            <div class="form-group row">
+            <div class="col-3">
+            <label for="Screenname">Screenname</label>
+            </div>
+            <div class="col-9">
+            <input type="text" placeholder="EnterScreenname" id="ScreenName" class="form-control"required>
+            </div>
+            </div>
+            <div  class="form-group row">
+                <div class="col-3">
+                <label>Gender:</label>
+            </div>
+                <div class="col-9">
+                <label class="form-check-label">
+                <input type="radio" name="Gender" class="form-checkinput">Male</label>
+                <input type="radio" name="Gender" class="form-checkinput">Female</label>
+                </div>
+                </div>
+                
+                  <div class="form-group row">
+                    <div class="col-3">
+                        <label for =" Date of Birth">Date of Birth</label>
+                    </div>
+                    <div class="col-3">
+                <select name="month">
+                    <option value="month">month</option>
+                    <option value="january">january</option>
+                    <option value="february">february</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select name="day">
+                    <option value="day">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select name="year">
+                    <option value="year">year</option>
+                    <option value="1995">1995</option>
+                    <option value="1998">1998</option>
+                </select>
+                </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-3">
+                           <label >Country: </label>
+                    </div>
+                           <div class="col-9">
+                            <select name=" " id=" " class="form-control">
+                            <option vlaue="USA">USA</option>
+                            <option vlaue="INDIA">India</option>
+                            <option vlaue="UK">Uk</option>
+                            </select>
+                       </div>
+                    
+                </div>
+     <div class="form-group row">
+    <div class="col-3">
+    <label for="Email">Email</label>
+    </div>
+    <div class="col-9">
+    <input type="Email" placeholder="EnterEmail" id="Email" class="form-control">
+    </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-3">
+        <label for="phone">Phone</label>
+        </div>
+        <div class="col-9">
+        
+        <input type="number" placeholder="Enterphonenumber" id="phone" class="form-control">
+        </div>
+        </div>
+    <div class="form-group row">
+        <div class="col-3">
+        <label for="Password">Password</label>
+        </div>
+        <div class="col-9">
+        <input type="Password" placeholder="EnterPassword" id="Password" class="form-control">
+        </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+            <label for="Confirm password">confirmPassword</label>
+            </div>
+            <div class="col-9">
+            <input type="Password" placeholder="ConfirmPassword" id="Password" class="form-control">
+            </div>
+           </div>
+            <div class="form-group row">
+                <div class="col-3"></div>
+                    <div class="col-9">
+                      <input  type="checkbox" name="I agree to The Terms of Use" class="form-check-input"> I agree to The Terms of Use</input>
+                </div>
+            </div>
+                </div>
+               
+              <div class="row" id="signupCss">
+                  <div class="col-9 "></div>
+                  <div class="col-3 mt-2 mb-2 buttonCss">
+               <button type="button" class="btn btn-success ">Submit</button>
+               <button type="button"  class= "btn btn-danger">cancel</button>
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </form>
+ </div>
+   

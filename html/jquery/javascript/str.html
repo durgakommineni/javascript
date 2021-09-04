@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <h4 >Reading a string input</h4>
+       
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <input type="text" id="str1" name="firstname" placeholder=" Enter name">
+        <button id="str2" class="btn btn-primary" >click me</button>
+        <script>
+           $(document).ready(function(){
+               $("button").click(function(){
+                   let result=[];
+                   let result2=[];
+                   let result3;
+              result=$("#str1").val();
+            console.log($("#str1").val())
+            result2=result.split("")
+            for(let i=0;i<result2.length;i++){
+                for(j=i+1;j<result2.length;j++){
+                    if(result2[i]>result2[j]){
+                        result3=result2[i]
+                        result2[i]=result2[j]
+                        result2[j]=result3
+                    }
+                }
+                
+                }  console.log(result2.join(''))
+
+            })
+            //console.log(result3)
+         });
+
+        </script>
+        </body>
+        </html>
