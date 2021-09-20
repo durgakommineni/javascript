@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>renderPage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+<body>
+    <div>   
+        <div text-align="center">
+        <form id="form1">
+            <label>Please enter below details</label><br><br>
+            <label>First Name *: </label><input id="FName" type="text" name="FName"/><br><br>
+            <label>Last Name *: </label><input id="LName" type="text" name="LName"/><br><br>         
+            <label>Email Address *: </label><input type="email" name="email"><br><br>
+            <br><br>
+            <input type="button" value="Submit" onClick="submitForm()">
+        </form>
+        <div id="showValue"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    function submitForm() {
+        $.ajax({
+            url: '/addName',
+            type: 'POST',
+            headers: headers,
+            data: {
+                "Fname": $("#FName").val(),
+                "Lname": $("#LName").val(),
+                "email": $("#email").val()
+            },
+            success: function(result) {
+                //append result to your html
+                //Dynamic view
+                $("#form1").hide();
+                var html = '<div><span>First Name: ' + result.fName + '</span><span>Last Name: ' + result.lName + '</span></div>';
+                $("#showValue").html(html);    
+            },
+            error: function (error) {
+                alert('error ',error);
+            }
+        });
+    }
+    </script>
+</body>
+</html>

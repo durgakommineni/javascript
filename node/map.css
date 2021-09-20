@@ -1,0 +1,152 @@
+
+   body {
+        color:yellow;
+      
+    }
+   
+#borderCss{
+    border:4px;
+
+}
+#name{
+    border-bottom: 2px;
+    color:yellow;
+    background-color:tomato;
+    
+}
+.backCss{
+    background-color:black;
+    
+}
+.textCss{
+    color:yellow;
+    float:right;
+}
+.buttonCss{
+    
+    display:flex;
+}
+<body>
+<div class=" form-group row">
+    <div class="col-3"></div>
+    <div class="col-6 backCss "id="borderCss">
+        <div class="row" id="name">
+            <label class="col-3">
+                <h6>Application</h6>
+            </label>
+    </div>
+<div class="container">
+<div class="form-group row">
+  <div class="col-3">
+  <label for="jobtitle">JobTitle</label>
+  </div>
+  <div class="col-9">
+  <input type="text" placeholder="Enter Jobtitle" id="name1" class="form-control"required>
+  </div>
+  </div>
+      <div class="form-group row">
+      <div class="col-3">
+      <label for="companyname">CompanyName</label>
+      </div>
+      <div class="col-9">
+      <input type="text" placeholder="Entercompanyname" id="name2" class="form-control"required>
+      </div>
+      </div>
+      
+          <div class="form-group row">
+          <div class="col-3">
+          <label for="Location">Location</label>
+          </div>
+          <div class="col-9">
+          <input type="text" placeholder="location" id="name3" class="form-control"required>
+          </div>
+        </div>
+              
+                <div class="form-group row">
+                  <div class="col-3">
+                      <label for ="yearsofexp">Years Of Experence</label>
+                  </div>
+                  <div class="col-3">
+              <select name="min-exp">
+                <option value="">min-exp</option>
+                  <option value="0">0months</option>
+                  <option value="0-6months">0-6months</option>
+
+              </select>
+          </div>
+          <div class="col-3">
+              <select name="max-year">
+                  <option value="">max-exp</option>
+                  <option value="1year">0-1year</option>
+                  <option value="2years">1-2year</option>
+              </select>
+          </div>
+        
+              </div>
+              <div class="form-group row ">
+                <div class="col-3">
+                       <label>Salary: </label>
+                </div>
+                       <div class="col-9">
+                        <select name=" " id=" " class="form-control">
+                          <option vlaue="">expected salary</option> 
+                        <option vlaue="sal">1.5-2Lakh</option>
+                        <option vlaue="salary">2.5-3Lakh</option>
+                        <option vlaue="salary1">3.5-4Lakh</option>
+                        </select>
+                   </div>
+                
+            </div>
+              <div class="form-group row ">
+                  <div class="col-3">
+                         <label >JobType: </label>
+                  </div>
+                         <div class="col-9">
+                          <select name=" " id=" " class="form-control">
+                            <option vlaue="">jobtype</option> 
+                          <option vlaue="permanent">permanent</option>
+                          <option vlaue="contarct">contract</option>
+                          </select>
+                     </div>
+                  
+              </div>
+              <div class="form-group row ">
+                <div class="col-3">
+                       <label >Education: </label>
+                </div>
+                       <div class="col-9">
+                        <select name=" " id=" " class="form-control">
+                          <option vlaue="">Select Qualification</option> 
+                        <option vlaue="ssc">SSC</option>
+                        <option vlaue="Inter">Inter</option>
+                        <option vlaue="graduation">Graduation</option>
+                        <option vlaue="pg">PostGraduation</option>
+                        <option vlaue="other">Others</option>
+                        </select>
+                   </div>
+                
+            </div>
+   <div class="form-group row">
+  <div class="col-3">
+  <label for="job">JobDescription</label>
+  </div>
+  <div class="col-9">
+    <textarea id="name3" name="w3review" rows="4" cols="50" class="form-control">
+
+    </textarea>
+  </div>
+</div>
+             
+            <div class="row" id="name">
+                <div class="col-9 "></div>
+                <div class="col-3 mt-2 mb-2 buttonCss">
+             <button type="button" class="btn btn-success ">Submit</button>
+             <button type="button"  class= "btn btn-danger">cancel</button>
+            </div>
+            </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  </form>
+</div> 

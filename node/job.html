@@ -1,0 +1,422 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <style>
+    body, html { 
+        background-color: #C6D7B1;
+        font-family: 'Open Sans', sans-serif;
+    }
+     .wrapper { 
+          width: 100%; 
+          margin: 0 auto;
+        margin-bottom: 20px;
+        }
+        .dialogCss{
+          max-width: 100%;
+        }
+    .box {
+          padding: 1px 0 1px 0;
+          text-align: center; 
+          border-radius: 10px 10px 0 0;
+          margin-top: 50px;
+          color: #EAEDC2;
+          text-shadow: 1px 1px 3px #000;
+          background-color:pink;
+    }
+            .main { 
+              background-color: #F5F5F5;
+              color: #828B6C;
+              padding: 1px 5px 10px 10px; 
+    }
+    .tableCss{
+      width:100%;
+    }
+    
+    .addtasks {
+      margin-bottom: 20px;
+    }
+    
+    .addtasks {
+      margin-bottom: 20px;
+    }
+    
+    #register{ 
+      background-color: #828B6C; 
+      padding: 5px;
+      width: 100%;
+      color: #EAEDC2;
+      text-align: center;
+      cursor: pointer;
+    }
+   
+    .taskModificationCss{
+      color: gray;
+      cursor: pointer;
+    }
+     #red {
+       color:red;
+    }
+    #myModal{
+text-align: center;
+    }
+    #title{
+        text-align: center; 
+    }
+    #myModal{
+      width:100%;
+      align-items: center;
+    }
+    #footerCss{
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+</style>
+
+<body>
+    <div class=" form-group row">
+        <div class="col-3"></div>
+        <div class="col-6 backCss "id="borderCss">
+            <div class="row" id="name">
+                <label class="col-3">
+                    <h6>Application</h6>
+                </label>
+        </div>
+    <div class="container">
+    <div class="form-group row">
+      <div class="col-3">
+      <label for="jobtitle">JobTitle</label>
+      </div>
+      <div class="col-9">
+      <input type="text" placeholder="Enter Jobtitle" id="name1" class="form-control"required>
+      </div>
+      </div>
+          <div class="form-group row">
+          <div class="col-3">
+          <label for="companyname">CompanyName</label>
+          </div>
+          <div class="col-9">
+          <input type="text" placeholder="Entercompanyname" id="name2" class="form-control"required>
+          </div>
+          </div>
+          
+              <div class="form-group row">
+              <div class="col-3">
+              <label for="Location">Location</label>
+              </div>
+              <div class="col-9">
+              <input type="text" placeholder="location" id="name3" class="form-control"required>
+              </div>
+            </div>
+                  
+                    <div class="form-group row">
+                      <div class="col-3">
+                          <label for ="yearsofexp">Years Of Experence</label>
+                      </div>
+                      <div class="col-3">
+                  <select name="min-exp"id="name4" >
+                    <option value="">min-exp</option>
+                      <option value="0">0months</option>
+                      <option value="6months">6months</option>
+    
+                  </select>
+              </div>
+              <div class="col-3">
+                  <select name="max-year"id="name4">
+                      <option value="">max-exp</option>
+                      <option value="1year">6months</option>
+                      <option value="2years">1year</option>
+                  </select>
+              </div>
+            
+                  </div>
+                  <div class="form-group row ">
+                    <div class="col-3">
+                           <label>Salary: </label>
+                    </div>
+                           <div class="col-9">
+                            <select name=" " id="name5" class="form-control">
+                              <option vlaue="">expected salary</option> 
+                            <option vlaue="sal">1.5-2Lakh</option>
+                            <option vlaue="salary">2.5-3Lakh</option>
+                            <option vlaue="salary1">3.5-4Lakh</option>
+                            </select>
+                       </div>
+                    
+                </div>
+                  <div class="form-group row ">
+                      <div class="col-3">
+                             <label >JobType: </label>
+                      </div>
+                             <div class="col-9">
+                              <select name=" " id="name6" class="form-control">
+                                <option vlaue="">jobtype</option> 
+                              <option vlaue="permanent">permanent</option>
+                              <option vlaue="contarct">contract</option>
+                              </select>
+                         </div>
+                      
+                  </div>
+                  <div class="form-group row ">
+                    <div class="col-3">
+                           <label >Education: </label>
+                    </div>
+                           <div class="col-9">
+                            <select name=" " id="name7" class="form-control">
+                              <option vlaue="">Select Qualification</option> 
+                            <option vlaue="ssc">SSC</option>
+                            <option vlaue="Inter">Inter</option>
+                            <option vlaue="graduation">Graduation</option>
+                            <option vlaue="pg">PostGraduation</option>
+                            <option vlaue="other">Others</option>
+                            </select>
+                       </div>
+                    
+                </div>
+       <div class="form-group row">
+      <div class="col-3">
+      <label for="job">JobDescription</label>
+      </div>
+      <div class="col-9">
+        <textarea id="name8" name="w3review" rows="4" cols="50" class="form-control">
+        </textarea>
+      </div>
+    </div>
+                 
+                <div class="row" id="name">
+                    <div class="col-9 "></div>
+                    <div class="col-3 mt-2 mb-2 buttonCss">
+                 <button type="button" class="btn btn-success "id="submit">Submit</button>
+                
+                </div>
+                </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      </form>
+    </div> 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    var jobist;
+    $(document).ready(function(){
+      getTaskDetails();
+      let result = {};
+      $("#register").click(function(){
+        $("#edit").hide();
+        $("#submit").show();
+        $("#name1").val(" ")
+        $("#name2").val(" ")
+        $("#name3").val(" ")
+        $("#name4").val(" ")
+        $("#name5").val(" ")
+      })
+        $("#errorFirstName").hide();
+        $("#errorLastName").hide();
+        $("#errorEmail").hide();
+        $("#errorPhone").hide();
+        $("#errorPassword").hide();
+        $("#table").hide()
+        $("#submit").click(function(){
+            var FirstName=$("#name1").val();
+            var LastName=$("#name2").val();
+            var Email=$("#name3").val();
+            var Phone=$("#name4").val();
+            var Password=$("#name5").val();
+              $("#errorFirstName").hide();
+              result["FirstName"] = FirstName
+        
+              $("#errorLastName").hide();
+              result["LastName"] = LastName
+              $("#errorEmail").hide();
+              result["Email"] = Email
+              $("#errorPhone").hide();
+              result["Phone"] = Phone
+              $("#errorPassword").hide();
+              result["password"] = Password
+          
+           console.log(result);
+           
+           if(FirstName != " " && LastName != " "&& Email !="" && Phone !=""&& Password !=""){
+           $.ajax({
+        url:'/task1',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           if(result.acknowledged == true){
+            $("#myModal").modal('hide')
+             getTaskDetails();
+           }
+        }
+      
+      });
+    }else{
+      if(FirstName ==" "){
+              $("#errorFirstName").show();
+                $("#errorFirstName").css('color','red');
+            }
+            if(LastName==" ")  {
+            $("#errorLastName").show();
+            $("#errorLastName").css('color','red')
+            }
+            if(Email==" ")  {
+            $("#errorEmail").show();
+            $("#errorEmail").css('color','red')
+            }
+            if(Phone==" ")  {
+            $("#errorPhone").show();
+            $("#errorPhone").css('color','red')
+            }
+            if(Password==" ")  {
+            $("#errorPassword").show();
+            $("#errorPassword").css('color','red')
+            }
+    }
+     
+    })
+  })
+    function getTaskDetails(){
+      $.ajax({
+        url:'/getTaskDetails',
+        method: "GET",
+        success: function (result, status) {
+         console.log(result);
+         taskList = result;
+         html = '';
+         if(taskList.length > 0){
+          $("#taskList").html('')
+            html += '<table class="tableCss"><tr><th>FirstName</th><th>LastName</th><th>Email</th><th>Phone</th><th>Password</th><th>Edit</th><th>Delete</th></tr>'
+            for(i=0;i<taskList.length;i++){
+              
+              html+='<tr><td>'+ taskList[i].FirstName+'</td><td>'+taskList[i].LastName+'</td><td>'+taskList[i].Email+'</td><td>'+taskList[i].Phone+'</td><td>'+taskList[i].Password+'</span></td><td><span class = "taskModificationCss" onclick="editTaskDetails(\''+taskList[i]._id +'\')">Edit</span></td><td><span class = "taskModificationCss" onclick="deleteTaskDetails(\''+taskList[i]._id +'\')">delete</span></td></tr>'              
+            }
+            html+= '</table>'
+            $("#taskList").html(html)
+         }
+        }
+      
+      });
+    }
+    function editTaskDetails(id){
+      $("#edit").show()
+      $("#submit").hide()
+      $("#edit").attr("Value",id)
+      if(taskList != undefined){
+        if(taskList.length>0){
+         let newList =  taskList.filter(x=>x._id == id)
+         if(newList.length != 0){
+           $("#name1").val(newList[0].FirstName)
+           $("#name2").val(newList[0].LastName)
+           $("#name3").val(newList[0].Email)
+           $("#name4").val(newList[0].Phone)
+           $("#name5").val(newList[0].Password)
+           $("#myModal").modal("show")
+         }
+        }
+      }
+    }
+    function deleteTaskDetails(id){
+      $("#deleteTask").attr("value",id)
+      $("#deleteTaskModal").modal("show")
+    }
+    $("#deleteTask").on("click",function(){
+      var result={
+        "_id":$("#deleteTask").attr('value')
+      }
+      $.ajax({
+        url:'/deleteTask',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           if(result.deletedCount != 0){
+            getTaskDetails()
+           }
+          
+        }
+      
+      });
+    })
+    $("#edit").on("click",function(){
+      var result = {};
+      $("#errorFirstName").hide();
+        $("#errorLastName").hide();
+        $("#errorEmail").hide();
+        $("#errorPhone").hide();
+        $("#errorPassword").hide();
+            var editName1=$("#name1").val();
+            var editName2=$("#name2").val();
+            var editEmail=$("#name3").val();
+            var editPhone=$("#name4").val();
+            var editPassword=$("#name5").val();
+            if(editName1 ==""){
+              $("#errorFirstName").show();
+                $("#errorFirstName").css('color','red');
+            }else{
+              $("#errorFirstName").hide();
+              result["FirstName"] = editName1
+            }
+          if(editName2=="")  {
+            $("#errorLastName").show();
+            $("#errorLastName").css('color','red')
+            }
+            else{
+              $("#errorLastName").hide();
+              result["LastName"] = editName2
+            }
+            if(editEmail=="")  {
+            $("#errorEmail").show();
+            $("#errorEmail").css('color','red')
+            }
+            else{
+              $("#errorEmail").hide();
+              result["Email"] = editEmail
+            }
+            if(editPhone=="")  {
+            $("#errorPhone").show();
+            $("#errorPhone").css('color','red')
+            }
+            else{
+              $("#errorPhone").hide();
+              result["Phone"] = editPhone
+            }
+            if(editPassword=="")  {
+            $("#errorPassword").show();
+            $("#errorPassword").css('color','red')
+            }
+            else{
+              $("#errorPassword").hide();
+              result["Password"] = editPassword
+            }
+          result["taskId"] = $("#edit").attr("value")
+           console.log(result);
+            if(editName1 !="" && editName2 !=""&& editEmail !=""&& editPhone !=""&&editPassword!=""){
+              $.ajax({
+        url:'/updateTask',
+        method: "PUT",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           $("#myModal").modal('hide')
+           getTaskDetails()
+        }
+      
+      });
+            }
+
+    })
+</script>
+
+</body>
+  </html>

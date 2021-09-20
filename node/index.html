@@ -1,0 +1,212 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+<style>
+   body {
+        color:yellow;
+    }
+   
+#borderCss{
+    border:4px;
+}
+#signupCss{
+    border-bottom: 2px;
+    color:yellow;
+    background-color:tomato;
+    
+}
+.backCss{
+    background-color:black;
+}
+.textCss{
+    color:yellow;
+    float:right;
+}
+.buttonCss{
+    display:flex;
+}
+</style>
+</head>
+<body>
+    <div class=" form-group row">
+      <div class="col-3"></div>
+      <div class="col-6 backCss "id="borderCss">
+          <div class="row" id="signupCss">
+              <label class="col-3">
+                  <h6>signup</h6>
+              </label>
+      </div>
+<div class="container">
+ <div class="form-group row">
+    <div class="col-3">
+    <label for="firstname">Firstname</label>
+    </div>
+    <div class="col-9">
+    <input type="text" placeholder="EnterFirstName" id="FirstName" class="form-control"required>
+<div id="fname"></div>    
+</div>
+    </div>
+        <div class="form-group row">
+        <div class="col-3">
+        <label for="Lastname">Lastname</label>
+        </div>
+        <div class="col-9">
+        <input type="text" placeholder="EnterLastName" id="LastName" class="form-control"required>
+        <div id="lname"></div>     
+    </div>
+        </div>
+     <div class="form-group row">
+    <div class="col-3">
+    <label for="Email">Email</label>
+    </div>
+    <div class="col-9">
+    <input type="Email" placeholder="EnterEmail" id="Email" class="form-control">
+    <div id="mail"></div> 
+    </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-3">
+        <label for="phone">Phone</label>
+        </div>
+        <div class="col-9">
+        
+        <input type="number" placeholder="Enterphonenumber" id="phone" class="form-control">
+        <div id="number"></div>     
+    </div>
+        </div>
+    <div class="form-group row">
+        <div class="col-3">
+        <label for="Password">Password</label>
+        </div>
+        <div class="col-9">
+        <input type="Password" placeholder="EnterPassword" id="Password" class="form-control">
+        <div id="pass"></div>    
+    </div>
+</div>
+            <div class="form-group row">
+                <div class="col-3"></div>
+                    <div class="col-9">
+                      <input  type="checkbox" name="I agree to The Terms of Use" class="form-check-input"> I agree to The Terms of Use</input>
+                      <div id="check"></div> 
+                    </div>
+            </div>
+                </div>
+               
+              <div class="row" id="signupCss">
+                  <div class="col-9 "></div>
+                  <div class="col-3 buttonCss">
+               <button type="button" class="btn btn-success ">Submit</button>
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </form>
+ </div>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        getTask1Details()
+        let result={}
+        $("button").click(function(){
+       var firstname= $("#FirstName").val();
+       var lastname= $("#LastName").val();
+       var email= $("#Email").val();
+       var phone = $("#phone").val();
+       var password=$("#Password").val();
+   
+        
+            $("#fname").show().html("*This field is required")
+            $("#lname").show().html("*This field is required")
+            $("#mail").show().html("*This field is required")
+            $("#number").show().html("*This field is required")
+            $("#pass").show().html("*This field is required")
+            $("#fname").css('color','red')
+            $("#lname").css('color','red')
+            $("#mail").css('color','red')
+            $("#number").css('color','red')
+            $("#pass").css('color','red')
+       
+           
+        console.log(result)
+        if(firstname==""||lastname==""||email==""||phone==""||password==""){
+           $.ajax({
+        url:'/signup',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+            getTask1Details()
+           console.log(result);
+        } 
+           });
+        }
+    else{
+        if(firstname==""||lastname==""||email==""||phone==""||password){
+              
+            $("#fname").hide();
+            result["FirstName"]=firstname;
+            $("#lname").hide();
+            result["LastName"]=lastname;
+            $("#mail").hide()
+            result["Email"]=email;
+            $("#number").hide()
+            result["phone"]=phone;
+            $("#pass").hide()
+            result["Password"]=password;
+    }
+    }; 
+}); function deleteTask1Details(id){
+      $("#deleteTask1").attr("value",id)
+    
+    }
+    $("#deleteTask1").on("click",function(){
+      var result={
+        "_id":$("#deleteTask1").attr('value')
+      }
+       if(firstname==""||lastname==""||email==""||phone==""||password){
+      $.ajax({
+        url:'/deleteTask1',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           if(result.deletedCount != 0){
+            getTask1Details()
+           }
+          
+        }
+      
+      });
+    }
+    })
+    
+            if(editUser !="" && editDisc !=""){
+              $.ajax({
+        url:'/updateTask1',
+        method: "PUT",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           getTask1Details()
+        }
+      
+      });
+ }
+
+    })
+
+
+    </script>   
+</body>
+   </html>

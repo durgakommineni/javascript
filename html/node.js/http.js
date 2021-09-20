@@ -1,6 +1,9 @@
-var http=require('http')
-http.createserver(function(req,res){
-    res.write('hello world');
-    res.end();
-    console.log('server running')
-}).listen(8080)
+const http=require('http');
+const server=http.createServer((req,res)=>
+{
+res.end("Welcome")
+});
+server.listen('8080',()=>
+{
+ console.log('server started at 8080 port');
+})

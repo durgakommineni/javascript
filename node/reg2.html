@@ -1,0 +1,416 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <style>
+    body, html { 
+        background-color: #C6D7B1;
+        font-family: 'Open Sans', sans-serif;
+    }
+     .wrapper { 
+          width: 100%; 
+          margin: 0 auto;
+        margin-bottom: 20px;
+        }
+        .dialogCss{
+          max-width: 100%;
+        }
+    .box {
+          padding: 1px 0 1px 0;
+          text-align: center; 
+          border-radius: 10px 10px 0 0;
+          margin-top: 50px;
+          color: #EAEDC2;
+          text-shadow: 1px 1px 3px #000;
+          background-color:pink;
+    }
+            .main { 
+              background-color: #F5F5F5;
+              color: #828B6C;
+              padding: 1px 5px 10px 10px; 
+    }
+    .tableCss{
+      width:100%;
+    }
+    
+    .addtasks {
+      margin-bottom: 20px;
+    }
+    
+    .addtasks {
+      margin-bottom: 20px;
+    }
+    
+    #register{ 
+      background-color: #828B6C; 
+      padding: 5px;
+      width: 100%;
+      color: #EAEDC2;
+      text-align: center;
+      cursor: pointer;
+    }
+   
+    .taskModificationCss{
+      color: gray;
+      cursor: pointer;
+    }
+     #red {
+       color:red;
+    }
+    #myModal{
+text-align: center;
+    }
+    #title{
+        text-align: center; 
+    }
+    #myModal{
+      width:100%;
+      align-items: center;
+    }
+    #footerCss{
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+</style>
+<body>
+<div class="wrapper">
+  
+    <div class="box">
+    <h1>RegistrationForm</h1>
+    </div>
+  
+    <div class="main">
+      <div class="addtasks">
+      <h2>RegisterHere</h2>
+        <hr>
+      </div>
+      
+      <input type="text" id="tasktext" name="tasktext"class="form-control" placeholder="E.g:register">
+  
+      <div class="container">
+                
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="register">register</button>
+                 <div class="form-group"> 
+               <div class="modal" id="myModal">
+                  <div class="modal-dialog dialogCss">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="text-center">RegistrationForm</h4>
+                        <button type="button" class="close" data-dismiss="modal">x</button>
+                      </div>
+                      <div class="modal-body ml-3 mr-3">
+                      <div class="row d-flex">
+                        <label for="tname">FirstName</label><span id="red">*<small></small></span>
+                        <input type="text" name="firstname"class="form-control" id="name1"><br>
+                        
+                        <div id="errorFirstName">**This field is required</div>
+                      </div> 
+                      <div class="row d-flex">
+                        <label for="tname">LastName</label><span id="red">*<small></small></span>
+                        <input type="text" name="lastname"class="form-control" id="name2"><br>
+                        
+                        <div id="errorLastName">**This field is required</div>
+                      </div> 
+                      <div class="row d-flex">
+                        <label for="tname">Email</label><span id="red">*<small></small></span>
+                        <input type="email" name="email"class="form-control" id="name3"><br>
+                        
+                        <div id="errorEmail">**This field is required</div>
+                      </div> 
+                      <div class="row d-flex">
+                        <label for="tname">Phone</label><span id="red">*<small></small></span>
+                        <input type="number" name="phone"class="form-control" id="name4"><br>
+                        
+                        <div id="errorPhone">**This field is required</div>
+                      </div> 
+                      <div class="row d-flex">
+                        <label for="tname">Password</label><span id="red">*<small></small></span>
+                        <input type="password" name="password"class="form-control" id="name5"><br>
+                        
+                        <div id="errorPassword">**This field is required</div>
+                      </div> 
+                     </div>
+                      <div class="modal-footer">
+              <div class="row"id="footerCss">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                       
+                      <button type="submit" class="btn btn-primary mr-2 " id="submit">submit</button> 
+                      <button type="button" class="btn btn-primary mr-2" id="edit">Edit</button>
+                        
+                     </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="modal" id="deleteTaskModal">
+                    <div class="modal-dialog dialogCss">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="text-center">DeleteRegistration</h4>
+                          <button type="button" class="close" data-dismiss="modal">x</button>
+                        </div>
+                        <div class="modal-body ml-3 mr-3">
+                        <div class="row d-flex">
+                        <span>Are you sure you want to delete?</span>
+                        </div> 
+              </div>
+                        <div class="modal-footer">
+                <div class="row"id="footerCss">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                         
+                        <button type="button" class="btn btn-primary mr-2 " id="deleteTask" data-dismiss="modal">Yes</button>
+                       
+                
+                       </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+                
+              </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-12">
+                <div id="taskList">
+  
+                </div>
+                </div>
+              </div>
+               
+            </div>
+          
+      
+         
+      
+    </div>
+    
+  </div>
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    var taskList;
+    $(document).ready(function(){
+      getTaskDetails()
+      $.get( "https://orchestra.maprecruit.com/sampleskillsdata  ", function( data ) {
+console.log(data)
+});
+      let result = {};
+      $("#register").click(function(){
+        $("#edit").hide();
+        $("#submit").show();
+        $("#name1").val(" ")
+        $("#name2").val(" ")
+        $("#name3").val(" ")
+        $("#name4").val(" ")
+        $("#name5").val(" ")
+      })
+        $("#errorFirstName").hide();
+        $("#errorLastName").hide();
+        $("#errorEmail").hide();
+        $("#errorPhone").hide();
+        $("#errorPassword").hide();
+        $("#table").hide()
+        $("#submit").click(function(){
+            var FirstName=$("#name1").val();
+            var LastName=$("#name2").val();
+            var Email=$("#name3").val();
+            var Phone=$("#name4").val();
+            var Password=$("#name5").val();
+              $("#errorFirstName").hide();
+              result["FirstName"] = FirstName
+        
+              $("#errorLastName").hide();
+              result["LastName"] = LastName
+              $("#errorEmail").hide();
+              result["Email"] = Email
+              $("#errorPhone").hide();
+              result["Phone"] = Phone
+              $("#errorPassword").hide();
+              result["password"] = Password
+          
+           console.log(result);
+           
+           if(FirstName != " " && LastName != " "&& Email !="" && Phone !=""&& Password !=""){
+           $.ajax({
+        url:'/task1',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           if(result.acknowledged == true){
+            $("#myModal").modal('hide')
+             getTaskDetails();
+           }
+        }
+      
+      });
+    }else{
+      if(FirstName ==" "){
+              $("#errorFirstName").show();
+                $("#errorFirstName").css('color','red');
+            }
+            if(LastName==" ")  {
+            $("#errorLastName").show();
+            $("#errorLastName").css('color','red')
+            }
+            if(Email==" ")  {
+            $("#errorEmail").show();
+            $("#errorEmail").css('color','red')
+            }
+            if(Phone==" ")  {
+            $("#errorPhone").show();
+            $("#errorPhone").css('color','red')
+            }
+            if(Password==" ")  {
+            $("#errorPassword").show();
+            $("#errorPassword").css('color','red')
+            }
+    }
+     
+    })
+  })
+    function getTaskDetails(){
+      $.ajax({
+        url:'/getTaskDetails',
+        method: "GET",
+        success: function (result, status) {
+         console.log(result);
+         taskList = result;
+         html = '';
+         if(taskList.length > 0){
+          $("#taskList").html('')
+            html += '<table class="tableCss table"><tr><th>FirstName</th><th>LastName</th><th>Email</th><th>Phone</th><th>Password</th><th>Edit</th><th>Delete</th></tr>'
+            for(i=0;i<taskList.length;i++){
+              
+              html+='<tr><td>'+ taskList[i].FirstName+'</td><td>'+taskList[i].LastName+'</td><td>'+taskList[i].Email+'</td><td>'+taskList[i].Phone+'</td><td>'+taskList[i].Password+'</span></td><td><span class = "taskModificationCss" onclick="editTaskDetails(\''+taskList[i]._id +'\')">Edit</span></td><td><span class = "taskModificationCss" onclick="deleteTaskDetails(\''+taskList[i]._id +'\')">delete</span></td></tr>'              
+            }
+            html+= '</table>'
+            $("#taskList").html(html)
+         }
+        }
+      
+      });
+    }
+    function editTaskDetails(id){
+      $("#edit").show()
+      $("#submit").hide()
+      $("#edit").attr("Value",id)
+      if(taskList != undefined){
+        if(taskList.length>0){
+         let newList =  taskList.filter(x=>x._id == id)
+         if(newList.length != 0){
+           $("#name1").val(newList[0].FirstName)
+           $("#name2").val(newList[0].LastName)
+           $("#name3").val(newList[0].Email)
+           $("#name4").val(newList[0].Phone)
+           $("#name5").val(newList[0].Password)
+           $("#myModal").modal("show")
+         }
+        }
+      }
+    }
+    function deleteTaskDetails(id){
+      $("#deleteTask").attr("value",id)
+      $("#deleteTaskModal").modal("show")
+    }
+    $("#deleteTask").on("click",function(){
+      var result={
+        "_id":$("#deleteTask").attr('value')
+      }
+      $.ajax({
+        url:'/deleteTask',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           if(result.deletedCount != 0){
+            getTaskDetails()
+           }
+          
+        }
+      
+      });
+    })
+    $("#edit").on("click",function(){
+      var result = {};
+      $("#errorFirstName").hide();
+        $("#errorLastName").hide();
+        $("#errorEmail").hide();
+        $("#errorPhone").hide();
+        $("#errorPassword").hide();
+            var editName1=$("#name1").val();
+            var editName2=$("#name2").val();
+            var editEmail=$("#name3").val();
+            var editPhone=$("#name4").val();
+            var editPassword=$("#name5").val();
+            if(editName1 ==""){
+              $("#errorFirstName").show();
+                $("#errorFirstName").css('color','red');
+            }else{
+              $("#errorFirstName").hide();
+              result["FirstName"] = editName1
+            }
+          if(editName2=="")  {
+            $("#errorLastName").show();
+            $("#errorLastName").css('color','red')
+            }
+            else{
+              $("#errorLastName").hide();
+              result["LastName"] = editName2
+            }
+            if(editEmail=="")  {
+            $("#errorEmail").show();
+            $("#errorEmail").css('color','red')
+            }
+            else{
+              $("#errorEmail").hide();
+              result["Email"] = editEmail
+            }
+            if(editPhone=="")  {
+            $("#errorPhone").show();
+            $("#errorPhone").css('color','red')
+            }
+            else{
+              $("#errorPhone").hide();
+              result["Phone"] = editPhone
+            }
+            if(editPassword=="")  {
+            $("#errorPassword").show();
+            $("#errorPassword").css('color','red')
+            }
+            else{
+              $("#errorPassword").hide();
+              result["Password"] = editPassword
+            }
+          result["taskId"] = $("#edit").attr("value")
+           console.log(result);
+            if(editName1 !="" && editName2 !=""&& editEmail !=""&& editPhone !=""&&editPassword!=""){
+              $.ajax({
+        url:'/updateTask',
+        method: "PUT",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           $("#myModal").modal('hide')
+           getTaskDetails()
+        }
+      
+      });
+            }
+
+    })
+</script>
+
+</body>
+  </html>
