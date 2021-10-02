@@ -1,0 +1,436 @@
+<html>
+    <head>
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
+        <script src="https://kit.fontawesome.com/24ed881261.js" crossorigin="anonymous"></script>
+
+    </head>
+    <style>
+     #bodyCss{
+     
+     height: 150px;
+    overflow-y: auto;
+     }
+     #icon{
+       color:white;
+       padding: 0.5em;;
+    display: inline-block;
+     }
+     #card{
+       font-size:20px;
+       font-style:oblique;
+     }
+      #card1{ height: 220px;
+    border-radius: 5px;
+    background-color: #273631;
+     }
+     #head{
+       border-radius: 5px;
+       color:white;
+      background-color: #273631;
+      height:80px
+     }
+     #head1{
+       background-color: white;
+       color:black
+     }
+     #icons{
+       color:lightblue;
+       text-align:right;
+     }
+     #editicon{
+       color:white;
+     }
+     #skills{
+       /* position:absolute; */
+       width:100%;
+       margin-top:-50px;
+     }
+     #editIcon{
+       color:white;
+     }
+     
+     #myModal{   
+      width:100%;
+      align-items: center;
+      text-align: center;
+      color:black;
+    }
+    #footerCss{
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    </style>
+        <body>
+          <div class="container">
+          <div class="card" id="card1">
+            <div class="card-body" id="head">
+              <div class="row">
+              <div class="col-11"></div>
+              <div class="col-1" id="editJobDetails">
+                <div class="d-flex">
+                  <div class="fas">
+                <i class="far fa-edit"></i>
+           </div>
+          </div>
+         
+       </div> 
+  
+       </div> 
+       <div class="form-group">
+        <div class="modal" id="myModal">
+          <div class="modal-dialog dialogCss">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Application</h4>
+                <button type="button" class="close" data-dismiss="modal">x</button>
+              </div>
+              <div class="modal-body ml-3 mr-3">
+              <div class="row d-flex">
+                <label>CompanyName</label>
+                <input type="text" name="companyname"class="form-control" id="companyName"><br>
+                <div id="errorCompanyname"></div>
+              </div>  <div class="row d-flex">
+                <label>Location</label>
+                <input type="text" name="location"class="form-control" id="Location"><br>
+                <div id="errorLocation"></div>
+              </div> 
+              <div class="row d-flex">
+                <label>Years Of Expirence</label>
+                <input type="number" name="experiance"class="form-control" id="Expirence"><br>
+                <div id="errorExpirence"></div>
+              </div>
+              <div class="row d-flex">
+                <label>Salary</label>
+                <input type="text" name="salary"class="form-control" id="Salary"><br>
+                <div id="errorSalary"></div>
+              </div>  
+               </div>
+              <div class="modal-footer">
+      <div class="row"id="footerCss">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               <button type="submit" class="btn btn-primary mr-2 " id="submit">submit</button> 
+               <button type="button" class="btn btn-primary mr-2" id="Edit">Edit</button>
+                
+             </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+       <div class="row mt-2">
+        <div class="col-2"></div>
+        <div class="col-2">
+      <h5 id="jobname">
+        
+      </h5>
+      </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-2"></div>
+        <div class="col-3">
+      <div class="d-flex">
+        <div class="fas ">
+      <i class="fas fa-building"id="icon"></i>
+      </div>
+      <p id="company">
+      </p>
+      </div>
+      </div>
+      <div class="col-1"></div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-2"></div>
+        <div class="col-4">
+      <div class="d-flex">
+        <div class="fas">
+    <i class="fal fa-map-marker-alt"id="icon"></i>
+    </div>
+    <p id="location">
+        
+      </p>
+    </div>
+    </div>
+     <div class="col-2">
+        <div class="d-flex">
+            <div class="fas">
+              <i class="fas fa-briefcase" id="icon"></i>
+        </div>
+        <p id="expirence">
+            
+          </p>
+        </div>
+        </div>
+        <div class="col-3">
+          <div class="d-flex">
+              <div class="fas">
+                <i class="fas fa-coins"id="icon"></i>
+          </div>
+          <p id="salary">
+              
+            </p>
+          </div>
+          </div>
+        </div>
+   </div>
+   </div>
+        <div class="row" id="skills">
+            <div class="col-1"></div>
+            <div class="col-sm-5">
+              <div class="card">
+              <div class="card-header"id="head1">
+                <div class="row"> 
+                  <div class="col-11">
+                <h6>Required skills</h6>
+              </div>
+              <div class="col-1">
+                <p id="requiredskills">
+                  
+              </p>
+              </div>
+            </div>
+            </div>
+              <div class="card-body"id="bodyCss">
+                  <p id="rskills">
+                   
+                  </p>
+                 </div>  
+                 </div>
+                 </div>
+
+          
+            <div class="col-sm-5">
+              <div class="card">
+              <div class="card-header"id="head1">
+                <div class="row" id="rpSkills">
+                  <div class="col-11">
+                <h6>Prefferd skills</h6>
+              </div>
+              <div class="col-1">
+                 </div>
+                <p id="prefferedskills">
+                  
+              </p>
+              </div>
+            </div>
+              <div class="card-body"id="bodyCss">
+                  <p id="pskills">
+                    
+                  </p>
+                 </div>  
+                 </div>
+                 </div>
+ </div>
+         </div>
+        
+           
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+        
+    <script>
+     var jobList;
+     var newList;
+     var data;
+      $(document).ready(function(){
+        getDetails()
+        $("#editJobDetails").click(function(){
+        $("#companyName").val(data[0].unit);
+        $("#Location").val(data[0].locations)
+        $("#Expirence").val(data[0].yearsofexpirence)
+        $("#Salary").val(data[0].salary)
+          $("#myModal").modal('show')
+        
+        })
+        $.ajax({
+          url:'/getDetails',
+          method: "GET",
+          success: function (result, status) {
+           console.log(result);
+           let windowId = window.location.href.split('=')[1]
+          console.log(windowId)
+          data = result.filter(x=>x._id == windowId)
+          console.log(data);
+          $("#jobname").text(data[0].JobTitle);
+          $('#company').text(data[0].unit);
+          $("#location").text(data[0].locations); 
+          $('#expirence').text(data[0].yearsofexpirence);
+          $('#salary').text(data[0].salary);
+          $('#pskills').text(data[0].Prefferedskills);
+          $('#rskills').text(data[0].Requiredskills);
+         
+      }
+    })
+    
+      
+      let result= {};
+      $("#errorCompanyname").hide();
+        $("#errorLocation").hide();
+        $("#errorExpirence").hide();
+        $("#errorSalary").hide();
+        $("#submit").click(function(){
+            var companyname=$("#companyName").val();
+            var location=$("#Location").val();
+            var expirence=$("#Expirence").val();
+            var salary=$("#Salary").val();
+              $("#errorCompanyname").hide();
+              result["unit"] = companyname
+                 $("#errorLocation").hide();
+              result["locations"] = location
+              $("#errorExpirence").hide();
+              result["yearsofexpirence"] = expirence
+              $("#errorSalary").hide();
+              result["salary"] =  salary
+             console.log(result);
+           
+           if(companyname!= "" && location!= ""&&expirence!= "" && salary!= ""){
+           $.ajax({
+        url:'/getDetails',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+           console.log(result);
+           if(result.acknowledged == true){
+            $("#myModal").modal('hide')
+             getDetails();
+           }
+        }
+      
+      });
+    }else{
+      if(companyname==""){
+              $("#errorCompanyname").show();
+                $("#errorCompanyname").css('color','red');
+            }
+            if(location=="")  {
+            $("#errorLocation").show();
+            $("#errorLocation").css('color','red')
+            }
+            if(expirence==""){
+              $("#errorExpirence").show();
+                $("#errorExpirence").css('color','red');
+            }
+            if(salary=="")  {
+            $("#errorSalary").show();
+            $("#errorSalary").css('color','red')
+            }
+    }
+    }); 
+    })
+    function getDetails(){
+      $.ajax({
+        url:'/getDetails',
+        method: "GET",
+        success: function (result, status) {
+         console.log(result);
+        jobList = result;
+         /*html = '';
+         if(jobList.length>0){
+          $("#jobList").html('')
+             html += '<table class="tableCss"><tr><th>unit</th><th>locations</th><th>yearsofexpirence</th><th>salary</th></tr>'
+            for(i=0;i<jobList.length;i++){
+              html+='<tr><td><a class="cursor" target="_blank" href="/show?id='+jobList[i]._id +'">'
+               +jobList[i].locations+'</td><td>'+jobList[i].yearsofexpirence+'</td><td>'+jobList[i].salary+'</td><td><span class = "jobModificationCss" onclick="editDetails(\''+jobList[i]._id +'\')">Edit</span></td></tr>'
+              
+            }  
+            html+='</table>'
+            $("#jobList").html(html)
+         }*/
+        }
+      
+      });
+    }
+    function editDetails(id){
+      $("#edit").show()
+      $("#submit").hide()
+      $("#edit").attr("Value",id)
+      if(jobList!= undefined){
+        if(jobList.length>0){
+         newList =  jobList.filter(x=>x._id == id)
+         if(newList.length != 0){
+          $("#companyName").text(newList[0].unit)
+          $('#Location').text(newList[0].locations)
+          $('#Expirence').text(newList[0].yearsofexpirence);
+          $('#Salary').text(newList[0].salary);
+           $("#myModal").modal("show")
+         }
+        }
+      }   
+    }
+   $("#Edit").on("click",function(){
+      var result= {};
+      $("#errorCompanyname").hide();
+        $("#errorLocation").hide();
+        $("#errorExpirence").hide();
+        $("#errorSalary").hide();
+            var editCompanyName=$("#companyName").val();
+            var editLocation=$("#Location").val();
+            var editExpirence=$("#Expirence").val();
+            var editSalary=$("#Salary").val();
+            // data[0].
+            data[0].unit = editCompanyName;
+            data[0].locations = editLocation;
+            data[0].salary = editSalary;
+            data[0].yearsofexpirence =editExpirence
+            if(editCompanyName==""){
+              $("#errorCompanyname").show();
+                $("#errorCompanyname").css('color','red');
+            }
+            else{
+              $("#errorCompanyname").hide();
+              result["unit"] = editCompanyName
+            }
+          if(editLocation=="")  {
+            $("#errorLocation").show();
+            $("#errorLocation").css('color','red')
+            }
+            else{
+              $("#errorLocation").hide();
+              result["locations"] = editLocation
+            }
+            if(editExpirence=="")  {
+            $("#errorExpirence").show();
+            $("#errorExpirence").css('color','red')
+            }
+            else{
+              $("#errorExpirence").hide();
+              result["yearsofexpirence"] = editExpirence
+            }
+            if(editSalary=="")  {
+            $("#errorSalary").show();
+            $("#errorSalary").css('color','red')
+            }
+            else{
+              $("#errorSalary").hide();
+              result["salary"] = editSalary
+            }
+          result["_Id"] = $("#edit").attr("value")
+           console.log(result);
+             if(editCompanyName!="" && editLocation!=""&&editExpirence!="" && editSalary!=""){ 
+              $.ajax({
+        url:'/updateDetails',
+        method: "POST",
+        data:JSON.stringify(data[0]),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+          console.log(result);
+           $("#myModal").modal('hide')
+           console.log(result)
+           getDetails()
+        }
+      
+      });
+             }
+
+          })
+   
+    </script>
+   
+</body>
+</html>

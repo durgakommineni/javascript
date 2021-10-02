@@ -1,0 +1,690 @@
+<html>
+    <head>
+      
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+        <script src="https://kit.fontawesome.com/24ed881261.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        #bodyCss{
+        
+        height: 400px;
+       
+        }
+        #icon{
+          color:blue
+        }
+        #save{
+          font-size:xx-large;
+          color:green;
+          border-radius: 2px;
+        }
+        #red{
+         color:red;
+        }
+        .card{ 
+            padding: 20px; 
+            border-radius: 10px;
+         } 
+       </style>
+        <body class="bg-light" >
+            <div class="row">
+                <div class=col-1></div>
+                <div class="col-2">
+                    <button type="button"  class="btn btn-info" id="save">submit</button>
+                </div>
+                <div class="col-7"></div>
+                <div class="col-2">
+                    <div class="d-flex">
+                        <div class="fas">
+                         <i class="far fa-save" id="Save"></i>                         
+            </div>
+          </div> 
+        </div>
+        </div>
+            <div class="col-1"></div>
+          <div class="col-11">
+              <hr>
+         </div>
+          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+          <div class="col-md-10">
+        <div class="card">
+        <div class=card-body id="bodyCss">
+            <div class="row">
+                <div class="col-3">
+                    <div class="userbox">
+                    <label>Job Title</label><span id="red">*<small></small></span>
+                    <input type="text" name="jobtitle" id="jobtitle"class="form-control">
+                      <div id="errorJobtitle"></div>
+              </div>
+              </div>
+    <div class="col-3">
+        <label>yearsofexpirence</label><span id="red">*<small></small></span>
+        <input type="number" name="jobtitle" id="years"class="form-control">
+          <div id="errorYears"></div>
+  </div>
+  <div class="col-3">
+    <label>JobType</label><span id="red">*<small></small></span><br>
+    <select id="jobtype" class="form-control">
+        <option value="">select</option>
+    <option value="permanent">permanent</option>
+    <option value="contract">contract</option>
+    <option value="intenship">Intenship</option>
+    <option value="part-time">Part-time</option>
+    <option value="unknown">unknown</option>
+    </select>
+    <div id="errorJobtype"></div>
+</div>
+
+<div class="col-3">
+    <label>Language</label><span id="red">*<small></small></span><br>
+      <select id="Language"class="form-control">
+        <option value="">select</option>
+        <option value="english">English</option>
+        <option value="dutch">Dutch</option>
+        <option value="france">france</option>
+        <option value="telugu">Telugu</option>
+        <option value="hindi">Hindi</option>
+        </select>
+        <div id="errorLanguage"></div> 
+</div>
+</div>
+<br>
+<br>
+  <div class="row"></div>
+  <div class="row">
+      <div class="col-3">
+          <label>
+            Locations  
+          </label><span id="red">*<small></small></span><br>
+          <select id="location"class="form-control">
+            <option value="">select</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="bengaluru">Bengaluru</option>
+            <option value="chennai">chennai</option>
+             </select>
+            <div id="errorLocation"></div>
+      </div>
+      <div class="col-3">
+        <label>
+          Location radius
+        </label><span id="red">*<small></small></span>
+        <input type="text" name="location" id="radius"class="form-control">
+        <div id="errorRadius"></div>
+    </div>
+    <div class="col-3">
+        <label>
+          Distance  
+        </label><span id="red">*<small></small></span>
+        <input type="text" name="distance" id="distance"class="form-control">
+        <div id="errorDistance"></div>
+    </div>
+    <div class="col-3">
+        <label>
+          Number of vacancies 
+        </label><span id="red">*<small></small></span>
+        <input type="number" name="vacancies" id="vacancies"class="form-control">
+        <div id="errorVacancies"></div>
+    </div>
+  </div>
+  <br>
+  <br>
+   <div class="row">
+    <div class="col-3">
+        <label>
+          Department  
+        </label><span id="red">*<small></small></span>
+        <input type="text" name="department" id="department"class="form-control">
+        <div id="errorDepartment"></div>
+    </div>
+    <div class="col-3">
+      <label>
+        Organization unit
+      </label><span id="red">*<small></small></span>
+     <br>
+        <select id="unit"class="form-control">
+            <option value="">select</option>
+            <option value="Coartha Technosolutions">Coartha Technosolutions </option>
+            <option value="Feature General">Feature General</option>
+            <option value="Manipal proleam">Manipal proleam</option>
+            </select>
+        
+      <div id="errorUnit"></div>
+  </div>
+  <div class="col-3">
+      <label>
+        Reason for opening 
+      </label><span id="red">*<small></small></span>
+     <br>
+        <select id="reason"class="form-control">
+            <option value="">select</option>
+            <option value="new requirement">New Requirement</option>
+            <option value="replacement position">Replacement position</option>
+            <option value="reallocated position">Reallocated Position</option>
+            <option value="additional position">Additional Position</option>
+            <option value="planned position">Planned Position</option>
+            </select>
+      <div id="errorReason"></div>
+  </div>
+  <div class="col-3">
+      <label>Grade</label><span id="red">*<small></small></span>
+     <br> <input type="text" name="grade" id="grade"class="form-control">
+      <div id="errorGrade"></div>
+  </div>
+</div>
+     </div>
+     </div>
+     <br>
+     <br>
+        <div class="card">
+            <div class=card-body id="bodyCss">
+                <div class="row">
+                <div class="col-6"> 
+                    <label>Required skills</label> <span id="red">*<small></small></span>
+                    </div>
+                    <di class="col-6">
+                        <label>Preffered skills</label><span id="red">*<small></small></span>
+                    </di>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                   <input type="text" name="required skills"class="form-control" id="required">
+                   <span id="errorRskills"></span>
+                   <div id="Rskills"></div>
+                   </div> 
+                   <button type="button" class="btn btn-primary" id="add">add</button>
+                   <div class="col-5">
+                    <input type="text" name="required skills"class="form-control" id="preffered">
+                    <span id="errorPskills"></span> 
+                    <div id="Pskills"></div>  
+                </div> 
+                    <button type="button" class="btn btn-primary" id="addmore">add</button>
+                    </div>
+        </div> 
+     </div>
+     <br>
+     <br>
+     <div class="col=3">
+         <div class="card">
+         <div class="card-body">
+            
+             <div class="col-3">
+                <h6>Others</h6> 
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                <label>Certifications</label><br>
+                <input type="text" name="certificate" id="certificate"class="form-control">
+                <div id="errorCertificate"></div>
+             </div>
+             
+             <div class="col-4">
+                <label>Work permit</label><br>
+                <input type="text" name="work permit" id="work"class="form-control">
+                <div id="errorWork"></div>
+             </div>
+             <div class="col-4">
+                 <label>Languages known</label><br>
+                 <input type="text" name="language" id="languageKnown"class="form-control">
+                 <div id="errorLanguagesknown"></div>
+             </div>
+             </div>
+             <br>
+             <div class="row">
+                  <div class="col-4">
+                <label>Notice period</label>
+                <input type="text" name="notice" id="notice"class="form-control">
+                <div id="errorNotice"></div>
+            </div>
+            <div class="col-4">
+                <label >Salary</label><br>
+               <select id="salary"class="form-control">
+                <option value="">select</option>
+                        <option value="currency">currency</option>
+                        <option value="INR">INR</option>
+                        <option value="UAD">UAD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="EUR">EUR</option>
+                        </select>
+                        <div id="errorSalary"></div>
+                </div>
+           </div>
+           <br>
+            <div class="row">
+            <div class="col-4">
+                <label>JobTiming</label><br>
+                <input type="text" name="jobtiming" id="jobtiming"class="form-control">
+                <div id="errorJobtiming"></div>
+            </div>
+            <div class="col-4">
+                <label>WorkingHours</label><br>
+                    <select  id="workinghours"class="form-control">
+                        <option value="">select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        </select>
+                   <div id="errorWork"></div>
+            </div>
+            </div>
+            <br>
+            <div class="row">
+            <div class="col-4">
+                <label>Nationality</label>
+                <input type="text"name="nation" id="nationality"class="form-control">
+                <div id="errorNationality"></div>
+            </div>
+            <div class="col-4">
+                <label>Age(in years)</label>
+                <input type="text"name="age" id="age"class="form-control">
+                <div id="errorAge"></div>
+            </div>
+            <div class="col-4">
+                <label>Gender</label><br>
+                    <select id="gender"class="form-control">
+                     <option value="">select</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                        </select>
+                    <div id="errorGender"></div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-3">
+            <label>Remote</label><br>
+                <select id="remote"class="form-control">
+                    <option value="">select</option>
+                    <option value="yes">yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                    </select>
+                <div id="errorRemote"></div>
+        </div>
+        <div class="col-3">
+            <label>Offshore</label><br>
+            
+                <select id="offshore"class="form-control">
+                    <option value="">select</option>
+                    <option value="yes">yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                    </select>
+                <div id="errorOffshore"></div>
+        </div>
+        <div class="col-3">
+            <label>TravelRequired</label><br>
+                <select id="travel"class="form-control">
+                    <option value="">select</option>
+                    <option value="yes">yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                    </select>
+                <div id="errorTravel"></div>
+        </div>
+        <div class="col-3">
+            <label>PassportRequired</label><br>
+                <select id="passport"class="form-control">
+                    <option value="">select</option>
+                    <option value="yes">yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                    </select>
+                <div id="errorPassport"></div>
+        </div>
+        
+        </div>
+             </div>
+             </div>
+         </div>
+     </div>
+     </div>
+     <div class="row">
+     <table id="jobDescriptionTable" class="display">
+        <thead>
+        <tr>
+        <th>JobTitle</th>
+        <th>yearsofexpirence</th>
+        <th>jobType</th>
+        <th>Language</th>
+        <th>locations</th>
+        <th>Distance</th>
+        <th>radius</th>
+        <th>vacancies</th>
+        <th>Department</th>
+        <th>unit</th>
+        <th>Reason</th>
+        <th>Grade</th>
+        <th>Requiredskills</th>
+        <th>Prefferedskills</th>
+        <th>Certificates</th>
+        <th>work</th>
+        <th>languagesknown</th>
+        <th>notice</th>
+        <th>salary</th>
+        <th>jobtiming</th>
+        <th>workinghours</th>
+        <th>nationality</th>
+        <th>age</th>
+        <th>Gender</th>
+        <th>remote</th>
+        <th>offshore</th>
+        <th>travel</th>
+        <th>passport</th>
+        </tr>
+        </thead>
+       <tbody id="tableBody">
+
+       </tbody>
+        </table>
+     </div>
+     
+     <div id="joblist" class="mt-4"></div>
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+    <script>
+       var joblist;
+    $(document).ready(function(){
+        // $("#jobDescriptionTable").hide()
+        getDetails();
+        $("#errorJobtitle").hide();
+        $("#errorYears").hide();
+        $("#errorJobtype").hide();
+        $("#errorLanguage").hide();
+        $("#errorLocation").hide();
+        $("#errorRadius").hide();
+        $("#errorDistance").hide();
+        $("#errorVacancies").hide();
+        $("#errorDepartment").hide();
+        $("#errorUnit").hide();
+        $("#errorReason").hide();
+        $("#errorGrade").hide();
+        $("#errorRskills").hide();
+        $("#errorPskills").hide();
+        $("#errorCertificate").hide();
+        $("#errorWork").hide();
+        $("#errorLanguagesknown").hide();
+        $("#errorSalary").hide();
+        $("#errorJobtiming").hide();
+        $("#errorWork").hide();
+        $("#errorNationality").hide();
+        $("#errorAge").hide();
+        $("#errorGender").hide();
+        $("#errorRemote").hide();
+        $("#Offshore").hide();
+        $("errorPassport").hide();
+        $("#errorTravel").hide();
+       
+        $("#add").click(function(){
+            var Required=[];
+            // var required=$("#required").val();
+            // Required["Required skills"]=required
+          Required=($("#Rskills").append($("#required").val()))
+          console.log(Required)
+        });
+        $("#addmore").click(function(){
+            let Preffered=[];
+            Preffered=($("#Pskills").append($("#preffered").val()))
+          console.log(Preffered)
+        })
+       
+    $("#save").click(function(){
+        $("#jobDescriptionTable").show()
+      let result = {};
+            var jobtitle=$("#jobtitle").val();
+              result["JobTitle"]=jobtitle
+             var years=$("#years").val();
+             result["yearsofexpirence"]=years
+            var jobtype=$("#jobtype").val();
+            result["jobType"]=jobtype
+            var Language=$("#Language").val();
+            result["Language"]=Language
+            var location=$("#location").val();
+            result["locations"]=location
+            var radius=$("#radius").val();
+            result["radius"]=radius
+           var distance= $("#distance").val();
+           result["Distance"]=distance
+           var vacancies= $("#vacancies").val();
+           result["vacancies"]=vacancies
+           var department= $("#department").val();
+           result["Department"]=department
+           var unit= $("#unit").val();
+           result["unit"]=unit
+          var reason= $("#reason").val();
+          result["Reason"]=reason
+           var grade= $("#grade").val();
+           result["Grade"]=grade
+          var required=$("#required").val();
+         result["Requiredskills"]=required
+          var preffered= $("#preffered").val();
+           result["Prefferedskills"]=preffered
+            var certificate=$("#certificate").val();
+            result["Certificates"]=certificate
+           var work= $("#work").val();
+           result["work"]=work
+            var languagesKnown=$("#languageKnown").val();
+            result["languagesknown"]=languagesKnown
+           var notice= $("#notice").val();
+           result["notice"]=notice
+            var salary=$("#salary").val();
+            result["salary"]=salary
+           var jobtiming= $("#jobtiming").val();
+           result["jobtiming"]=jobtiming
+          var workinghours=  $("#workinghours").val();
+          result["workinghours"]=workinghours
+           var nationality= $("#nationality").val();
+           result["nationality"]=nationality
+           var age= $("#age").val();
+           result["age"]=age
+           var gender= $("#gender").val();
+           result["Gender"]=gender
+           var remote= $("#remote").val();
+           result["remote"]=remote
+          var offshore=  $("#offshore").val();
+          result["offshore"]=offshore
+            var travel=$("#travel").val();
+            result["travel"]=travel
+           var passport= $("#passport").val();
+           result["passport"]=passport
+           console.log(result)
+           console.log(jobtitle,"JobTitle")
+           console.log(years,"Years")
+           console.log(jobtype,"JobType");
+           console.log(Language,"Language");
+           console.log(location,"Location");
+           console.log(radius,"Radius");
+           console.log(distance,"Distance");
+           console.log(vacancies,"Vacancies");
+           console.log(department,"Department");
+           console.log(unit,"Unit");
+           console.log(reason,"Reason");
+           console.log(grade,"Grade");
+           console.log(required,"Required");
+           console.log(preffered,"Preffered");
+           console.log(certificate,"certificates");
+           console.log(work,"work");
+           console.log(languagesKnown,"languageknown");
+           console.log(notice,"Notice");
+           console.log(salary,"Salary");
+           console.log(jobtiming,"Jobtiming");
+           console.log(workinghours,"Workinghours");
+           console.log(nationality,"Nationality");
+           console.log(age,"age");
+           console.log(gender,"Gender")
+           console.log(remote,"Remote");
+           console.log(offshore,"offshore");
+           console.log(travel,"travel");
+           console.log(passport,"passport");
+       debugger;
+           if(jobtitle !="" && years !=""&& jobtype !="" && Language !=""&& location!=""&&radius!= " " &&distance != " "&& vacancies !="" &&department!=""&& unit!=""&&reason!=""&&grade!=""&&certificate!=""&&work!=""&&languagesKnown!=""&&notice!=""&&salary!=""&&jobtiming!=""&&workinghours!=""&&nationality!=""&&age!=""&&gender!=""&&remote!=""&&offshore!=""&&travel!=""&&passport!=""){
+           $.ajax({
+        url:'/jobtitle',
+        method: "POST",
+        data:JSON.stringify(result),
+        dataType: 'json',
+    contentType: 'application/json',
+        success: function (result, status) {
+            // getJobDetails();
+           console.log(result);
+          
+            
+           
+        }
+    
+    })
+    }
+else{
+      if(jobtitle==""){
+              $("#errorJobtitle").show().html("*this field is required");
+                $("#errorJobtitle").css('color','red');
+            }
+            if(years=="")  {
+            $("#errorYears").show().html("**This field is required");
+            $("#errorYears").css('color','red')
+            }
+            if(jobtype=="")  {
+            $("#errorJobtype").show().html("**This field is required");
+            $("#errorJobtype").css('color','red')
+            }
+            if(Language=="")  {
+            $("#errorLanguage").show().html("**This field is required");;
+            $("#errorLanguage").css('color','red')
+            }
+            if(location=="")  {
+            $("#errorLocation").show().html("**This field is required");;
+            $("#errorLocation").css('color','red')
+            }
+            if(radius =="")  {
+            $("#errorRadius").show().html("**This field is required");;
+            $("#errorRadius").css('color','red')
+            }
+            if(distance=="")  {
+            $("#errorDistance").show().html("**This field is required");;
+            $("#errorDistance").css('color','red')
+            }
+            if(vacancies=="")  {
+            $("#errorVacancies").show().html("**This field is required");;
+            $("#errorVacancies").css('color','red')
+            }
+            if(department=="")  {
+            $("#errorDepartment").show().html("**This field is required");;
+            $("#errorDepartment").css('color','red')
+            }
+            if(unit=="")  {
+            $("#errorUnit").show().html("**This field is required");;
+            $("#errorUnit").css('color','red')
+            }
+            if(reason=="")  {
+            $("#errorReason").show().html("**This field is required");;
+            $("#errorReason").css('color','red')
+            }
+            if(grade=="")  {
+            $("#errorGrade").show().html("**This field is required");;
+            $("#errorGrade").css('color','red')
+            }
+            if(required=="")  {
+            $("#errorRskills").show().html("**This field is required");;
+            $("#errorRskills").css('color','red')
+            }
+            if(preffered=="")  {
+            $("#errorPskills").show().html("**this field is required");
+            $("#errorPskills").css('color','red')
+            }
+            if(certificate==""){
+                $("#errorCertificate").show().html("**This field is required");
+                $("#errorCertificate").css('color','red')
+            }
+            if(work==""){
+                $("#errorWork").show().html("**This field is required");
+                $("#errorWork").css('color','red')
+            }errorLanguagesknown
+            if(languagesKnown==""){
+                $("#errorLanguagesknown").show().html("**This field is required");
+                $("#errorLanguagesknown").css('color','red')
+            }
+            if(notice==""){
+                $("#errorNotice").show().html("**This field is required");
+                $("#errorNotice").css('color','red')
+            }
+            if(salary==""){
+                $("#errorSalary").show().html("**This field is required");
+                $("#errorSalary").css('color','red')
+            }
+            if(jobtiming==""){
+                $("#errorJobtiming").show().html("**This field is required");
+                $("#errorJobtiming").css('color','red')
+            }
+            if(workinghours==""){
+                $("#errorWork").show().html("**This field is required");
+                $("#errorWork").css('color','red')
+            }
+            if(nationality==""){
+                $("#errorNationality").show().html("**This field is required");
+                $("#errorNationality").css('color','red')
+            }
+            if(age==""){
+                $("#errorAge").show().html("**This field is required");
+                $("#errorAge").css('color','red')
+            }
+            if(gender==""){
+                $("#errorGender").show().html("**This field is required");
+                $("#errorGender").css('color','red')
+            }
+            if(remote==""){
+                $("#errorRemote").show().html("**This field is required");
+                $("#errorRemote").css('color','red')
+            }
+            if(offshore==""){
+                $("#errorOffshore").show().html("**This field is required");
+                $("#errorOffshore").css('color','red')
+            }
+            if(travel==""){
+                $("#errorTravel").show().html("**This field is required");
+                $("#errorTravel").css('color','red')
+            }
+            if(passport==""){
+                $("#errorPassport").show().html("**This field is required");
+                $("#errorPassport").css('color','red')
+            }
+         console.log(result)   
+        }
+    });
+
+    
+    function getDetails(){
+      $.ajax({
+        url:'/getDetails',
+        method: "GET",
+        success: function (result, status) {
+         console.log(result);
+         joblist=result;
+         html = '';
+         if(joblist.length > 0){
+          $("#joblist").html('')
+        
+        //  html += '<table class="tableCss table" id="jobDescriptionTable"><tr><th>JobTitle</th><th>yearsofexpirence</th><th>jobType</th><th>Language</th><th>locations</th><th>Distance</th><th>radius</th><th>vacancies</th><th>Department</th><th>unit</th><th>Reason</th><th>Grade</th><th>Requiredskills</th><th>Prefferedskills</th><th>Certificates</th><th>work</th><th>languagesknown</th><th>notice</th><th>salary</th><th>jobtiming</th><th>workinghours</th><th>nationality</th><th>age</th><th>Gender</th><th>remote</th><th>offshore</th><th>travel</th><th>passport</th></tr>'
+            for(i=0;i<joblist.length;i++){
+                $("#tableBody").append( '<tr><td><a class="cursor" target="_blank" href="/show?id='+joblist[i]._id +'">'+ joblist[i].JobTitle+'</a></td><td>'+joblist[i].yearsofexpirence+'</td><td>'+joblist[i].jobType+'</td><td>'+joblist[i].Language+'</td><td>'+joblist[i].locations+'</td><td>'+joblist[i].Distance+'</td><td>'+joblist[i].radius+'</td><td>'+joblist[i].vacancies+'</td><td>'+joblist[i].Department+'</td><td>'+joblist[i].unit+'</td><td>'+joblist[i].Reason+'</td><td>'+joblist[i].Grade+'</td><td>'+joblist[i].Requiredskills+'</td><td>'+joblist[i].Prefferedskills+'</td><td>'+joblist[i].Certificates+'</td><td>'+joblist[i].work+'</td><td>'+joblist[i].languagesknown+'</td><td>'+joblist[i].notice+'</td><td>'+joblist[i].salary+'</td><td>'+joblist[i].jobtiming+'</td><td>'+joblist[i].workinghours+'</td><td>'+joblist[i].nationality+'</td><td>'+joblist[i].age+'</td><td>'+joblist[i].Gender+'</td><td>'+joblist[i].remote+'</td><td>'+joblist[i].offshore+'</td><td>'+joblist[i].travel+'</td><td>'+joblist[i].passport+'</span></td></tr>' )            
+            }
+              html += '</table>'
+
+             $("#joblist").html(html)
+            $("#jobDescriptionTable").DataTable()  
+         }
+        } 
+           });
+    };
+           
+    });
+
+</script>
+</body>
+</html>
