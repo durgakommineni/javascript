@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <script src="https://kit.fontawesome.com/24ed881261.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    #card1{
+       
+        border-radius: 10px;
+    }
+    #cardHide{
+        border-radius: 10px; 
+    }
+
+   #addIcon{ 
+    color:lightgray;
+    text-align: center;
+    }
+    #p1{
+        color: lightgrey;
+        text-align: center;
+    }
+    #flex{
+        text-align:center;
+    }
+    #degreeLevel{
+        color:lightsteelblue;
+        font-size:14px;
+    }
+    #Degree{
+        color:lightsteelblue;
+        font-size:14px;  
+    }
+    #Major{
+        color:lightsteelblue;
+        font-size:14px;  
+    }
+   #inistitution{
+    color:lightsteelblue;
+        font-size: 14px;
+   }
+   #inputFields{
+    color:lightsteelblue;
+   }
+   #selectDegree{
+    color:lightsteelblue;
+   }
+   #delete{
+    color:lightgray;
+    font-size: medium;
+   }
+   #Merit{
+    color:lightgray;
+    font-size:14px;
+   }
+   #GPA{
+    color:lightsteelblue;
+    font-size:14px;
+   }
+   #inputField2{
+    color:lightsteelblue;
+   }
+   input[type="text"]{
+       border:none;
+       border-bottom: 1px solid lightsteelblue;
+   }
+   #selectDegree{
+       border:none
+   }
+   #save{
+       color:green;
+       font-size:20px;
+   }
+   div.container {
+        width: 100%;
+   }
+</style>
+<body>
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+            <ul class="navbar-nav mr-auto">
+                <div class="col-4"></div>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Dashboard</a>
+                </li>
+                
+                <div class="col-1"></div>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/jobDescription">JobDescription</a>
+                </li>
+                </ul>
+                </nav>
+        <!-- <div class="card" id="card1"> 
+            <div class="card-body" id="cardBody">
+                <div class="row">
+                    <div class="col-3">
+             <h5>Education</h5>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-1">
+                 <div class="fas">
+                    <i class="far fa-save" id="save"></i> 
+                 </div>
+                 </div>
+             </div>
+             </div>
+             <div id="Education">
+              <div class="card" id="cardHide" >
+                 <div class="card-body"id="card2" >
+                     <div class="row" id="degreeLevel">
+                  <div class="col-2">
+                      <label>Degree level</label>
+                      </div>
+                      <div class="col-2"></div>
+                      <div class="col-4">
+                         <label>Degree</label> 
+                      </div>
+                      <label>Major</label>
+                      </div>
+                     <div class="row" id="inputFields">
+                        <div class="col-2">
+                       <select id="selectDegree" class="form-control">
+                          <option value="select">Select</option>
+                          <option value="secondaryschool">secondaryschool</option>
+                          <option value="Highersecondaryschool">Highersecondaryschool</option>
+                          <option value="Diploma">Diploma</option>
+                          <option value="vocationalEducation">vocationalEducation</option>
+                          <option value="Bachelors">Bachelors</option>
+                          <option value="PHD">PHD</option>
+                          <option value="Law">Law</option>
+                       </select> 
+                       <input type="text" name="select" class="form-control"/>
+                       <div id="errorSelect">**This field is required</div>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        <input type="text" name="degree" id="Degree1"class="form-control">
+                        <div id="errorDegree">**This field is required</div>
+                    </div>
+                    <div class="col-4">
+                    <input type="text" name="major" id="Major"class="form-control">
+                    <div id="errorMajor">**This field is required</div>
+                    </div>
+                </div>
+                    <div class="row" id="inistitution">
+                        <div class="col-2">
+                        <label>Institution</label>
+                    </div>
+                        <div class="col-2"></div>
+                        <div class="col-3">
+                            <label>GraduationYear</label>
+                        </div>
+                        <div class="col-1">
+                        <label>merit</label>
+                    </div>
+                    <div class="col-2">
+                        <label id="Grade"></label>
+                    </div>
+                    <div class="col-1">
+                    <label>Importance</label>
+                  </div>
+                  
+                  </div>
+                  <div class="row"id="inputField2">
+                      <div class="col-4">
+                          <input type="text" name="inistitution" id="Institute" class="form-control">
+                    <div id="errorInstitution">**This field is required</div>
+                     
+                        </div>
+                      <div class="col-3">
+                        <input type="text" name="GraduationYear" id="Graduation" class="form-control">
+                    <div id="errorGraduation">**This field is required</div>
+                          
+                    </div>
+                      <div class="col-2">
+                        <input type="text" name="merit" id="Merit" value="GPA"class="form-control">
+                        <div id="errorMerit">**This field is required</div> 
+                    </div>
+                      <div class="col-2" id="GPA">Major
+                          <input type="radio" name="merit"id="gpa" value="GPA">GPA</input>
+                          <input type="radio" name="merit" id="percentage" value="%">%</input>
+                          <div id="errorGrade">**This field is required</div> 
+                      </div>
+                      <div class="fas">
+                      <i class="fas fa-minus-circle"></i>
+                      </div>
+                  </div>
+                </div>
+             </div> 
+             </div>
+             <div class="row" id="icon">
+                 <div class="col-5"></div>
+              <div class="fas"id="flex">
+                    <i class="fas fa-plus-circle" id="addIcon"></i>
+                    <p id="p1">Add Education Details</p>
+              </div>
+            </div>
+            </div>-->
+      
+   <div class="row"> 
+        <table id="dashboardTable" class="display" width="100%">
+           <thead>
+           <tr>
+            <th>selectDegree</th>
+            <th>Degree1</th>
+            <th>Major</th>
+            <th>Institute</th>
+            <th>Graduation</th>
+            <th>Merit</th>
+            <th>GPA</th>
+           </tr>
+           </thead>
+          <tbody id="tableBody">
+   
+          </tbody>
+           </table>
+        </div>
+        
+        <div id="joblist" class="mt-4"></div>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+   <script type='text/javascript' src="/js/jobDetails.js"></script>
+   </body>
+   </html>
